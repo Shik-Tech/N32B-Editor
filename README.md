@@ -2,6 +2,9 @@
 A desktop application for editing the N32B midi controller.
 This project uses Electron.js and React.js.
 
+## How does it look like?
+![](N32B-Editor.png)
+
 ## The Electron Project
 
 ### `yarn`
