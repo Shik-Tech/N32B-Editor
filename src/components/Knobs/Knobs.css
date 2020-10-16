@@ -1,0 +1,41 @@
+.KnobsContainer {
+    flex: 1;
+    width: 505px;
+    height: 227px;
+    margin-left: 36px;
+    margin-top: 116px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.KnobRow {
+    display: flex;
+    flex-direction: row;
+    /* flex: 1; */
+    position: relative;
+    /* margin-bottom: 45px; */
+    justify-content: space-between;
+    align-content: space-between;
+
+    /* background-color: rgba(94, 255, 0, 0.2); */
+}
+
+.Knob {
+    border: 2px solid transparent;
+    height: 19px;
+    width: 19px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    /* border-color: #ff9c0e; */
+}
+
+.Knob:hover,
+.Knob-selected {
+    box-shadow: 0px 0px 20px 10px rgba(255, 156, 14, 0.7);
+}
+
+.Knob-selected {
+    border-color: #ff9c0e;
+}

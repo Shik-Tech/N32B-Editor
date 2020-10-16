@@ -1,0 +1,69 @@
+{
+  "name": "editor",
+  "description": "Desktop editor for the N32B midi controller",
+  "version": "0.1.0",
+  "license": "CC BY-NC 4.0",
+  "author": {
+    "name": "Shik",
+    "email": "shik@shik.tech",
+    "url": "https://shik.tech"
+  },
+  "private": true,
+  "homepage": "./",
+  "main": "public/electron.js",
+  "build": {
+    "appId": "tech.shik.editor",
+    "productName": "N32B Editor",
+    "copyright": "Copyright © 2020 SHIK",
+    "files": [
+      "build/**/*",
+      "assets/icon.*",
+      "node_modules/**/*"
+    ]
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "ebuild": "npm run build && node_modules/.bin/build",
+    "pack": "electron-builder --dir",
+    "dist": "npm run build && electron-builder",
+    "postinstall": "electron-builder install-app-deps",
+    "dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electron .\""
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "avrgirl-arduino": "^4.2.4",
+    "concurrently": "^5.3.0",
+    "electron-is-dev": "^1.2.0",
+    "fs-jetpack": "^3.1.0",
+    "lodash": "^4.17.20",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.3",
+    "wait-on": "^5.2.0",
+    "webmidi": "^2.5.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "electron": "^10.1.3",
+    "electron-builder": "^22.9.1"
+  }
+}

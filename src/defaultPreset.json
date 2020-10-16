@@ -1,0 +1,327 @@
+{
+    "channel": 1,
+    "NRPNMSB": false,
+    "presetID": 0,
+    "knobs": [
+        {
+            "id": 1,
+            "hardwareId": 15,
+            "type": 1,
+            "valOne": 1,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 2,
+            "hardwareId": 14,
+            "type": 1,
+            "valOne": 2,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 3,
+            "hardwareId": 12,
+            "type": 1,
+            "valOne": 3,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 4,
+            "hardwareId": 9,
+            "type": 1,
+            "valOne": 4,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 5,
+            "hardwareId": 31,
+            "type": 1,
+            "valOne": 5,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 6,
+            "hardwareId": 24,
+            "type": 1,
+            "valOne": 6,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 7,
+            "hardwareId": 20,
+            "type": 1,
+            "valOne": 7,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 8,
+            "hardwareId": 16,
+            "type": 1,
+            "valOne": 8,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 9,
+            "hardwareId": 13,
+            "type": 1,
+            "valOne": 9,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 10,
+            "hardwareId": 11,
+            "type": 1,
+            "valOne": 10,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 11,
+            "hardwareId": 10,
+            "type": 1,
+            "valOne": 11,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 12,
+            "hardwareId": 2,
+            "type": 1,
+            "valOne": 12,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 13,
+            "hardwareId": 30,
+            "type": 1,
+            "valOne": 13,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 14,
+            "hardwareId": 25,
+            "type": 1,
+            "valOne": 14,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 15,
+            "hardwareId": 21,
+            "type": 1,
+            "valOne": 15,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 16,
+            "hardwareId": 17,
+            "type": 1,
+            "valOne": 16,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 17,
+            "hardwareId": 8,
+            "type": 1,
+            "valOne": 17,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 18,
+            "hardwareId": 7,
+            "type": 1,
+            "valOne": 18,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 19,
+            "hardwareId": 4,
+            "type": 1,
+            "valOne": 19,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 20,
+            "hardwareId": 1,
+            "type": 1,
+            "valOne": 20,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 21,
+            "hardwareId": 29,
+            "type": 1,
+            "valOne": 21,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 22,
+            "hardwareId": 26,
+            "type": 1,
+            "valOne": 22,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 23,
+            "hardwareId": 22,
+            "type": 1,
+            "valOne": 23,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 24,
+            "hardwareId": 18,
+            "type": 1,
+            "valOne": 24,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 25,
+            "hardwareId": 6,
+            "type": 1,
+            "valOne": 25,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 26,
+            "hardwareId": 5,
+            "type": 1,
+            "valOne": 26,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 27,
+            "hardwareId": 3,
+            "type": 1,
+            "valOne": 27,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 28,
+            "hardwareId": 0,
+            "type": 1,
+            "valOne": 28,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 29,
+            "hardwareId": 28,
+            "type": 1,
+            "valOne": 29,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 30,
+            "hardwareId": 27,
+            "type": 1,
+            "valOne": 30,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 31,
+            "hardwareId": 23,
+            "type": 1,
+            "valOne": 31,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        },
+        {
+            "id": 32,
+            "hardwareId": 19,
+            "type": 1,
+            "valOne": 32,
+            "valTwo": 0,
+            "valThree": 0,
+            "valFour": 0,
+            "inverted": false
+        }
+    ]
+}

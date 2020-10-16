@@ -1,0 +1,201 @@
+html {
+  margin: 0px;
+  padding: 0px;
+  background: #ffffff;
+}
+
+.App {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* width: 920px; */
+  /* height: 480px; */
+  height: 100vh;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.title {
+  margin: 0 0 5px 0;
+  /* padding: 0; */
+  font-size: 25px;
+  font-weight: bold;
+}
+.subtitle{
+  margin: 0 0 10px 0;
+  /* padding: 0; */
+  font-size: 16px;
+  font-weight: bold;
+}
+.presetNameTitle {
+  margin: 0 20px 5px 0;
+  font-size: 16px;
+  font-weight: bold;
+  justify-self: flex-end;
+  align-self: center;
+}
+.presetName {
+  margin: 0 20px 5px 0;
+  font-size: 16px;
+  justify-self: flex-end;
+  align-self: center;
+}
+
+.deviceNotConnected {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.column {
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.operationsContainer {
+  display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.currentKnob {
+  color: #ff9c0e;
+}
+
+.LeftSide {
+  width: 594px;
+  padding: 8px 10px;
+  background-color: #ffffff;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main column */
+.RightSide {
+  display: flex;
+  flex: 1;
+  padding: 8px 10px;
+  background: #000000;
+  color: #ffffff;
+  flex-direction: column;
+
+}
+
+select,
+input {
+  border: 2px solid #ffffff;
+  padding: 5px;
+  outline: none;
+  font-weight: bold;
+  border-radius: 10px;
+  /* flex: 1; */
+  justify-content: flex-start;
+}
+
+input[type=checkbox] {
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+  flex: none;
+}
+
+input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  cursor: inherit;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  background-color: #ff9c0e;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  padding: 8px;
+}
+button:hover {
+  background-color: #fdc06a;
+}
+button:active {
+  background-color: #bd6e00;
+}
+button:disabled {
+  background-color: gray;
+}
+
+.seperator {
+  border-top: 1px solid #ffffff;
+  margin: 10px 0;
+}
+
+.editorContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+}
+
+.editorContainer label,
+.editorContainer select {
+  display: flex;
+  /* flex: 3; */
+  align-content: center;
+  align-items: center;
+}
+
+.editorRow {
+  margin-bottom: 5px;
+}
+
+#gear {
+  width: 80px;
+  height: 80px;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.spinning {
+  animation: rotation 0.8s infinite linear;
+}
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+} */
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+
+/* @keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
