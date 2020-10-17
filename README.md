@@ -5,7 +5,7 @@ This project uses [Electron](https://www.electronjs.org/) and [React](https://re
 The N32B is an open-source midi controller project and a DIY kit.<br />
 You can find more information in our [website](https://shik.tech).
 
-## How does it look like?
+## How does it look?
 ![](N32B-Editor.png)
 
 ## The Electron Project
