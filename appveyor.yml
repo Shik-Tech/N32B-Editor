@@ -18,6 +18,6 @@ build_script:
   - yarn dist
   
 artifacts:
-- path: dist
+  - path: dist
 
 test: off
