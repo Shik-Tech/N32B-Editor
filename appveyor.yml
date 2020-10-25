@@ -18,6 +18,7 @@ build_script:
   - yarn dist
   
 artifacts:
-  - path: dist
+  - path: dist/*.exe
+  - path: dist/*.dmg
 
 test: off
