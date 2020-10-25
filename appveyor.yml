@@ -28,6 +28,5 @@ artifacts:
   - path: dist\*.exe
   - path: dist\*.dmg
   - path: dist\*.AppImage
-  - path: dist\*.snap
 
 test: off
