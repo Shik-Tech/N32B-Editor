@@ -11,11 +11,9 @@ environment:
 
 cache:
   - node_modules
-  - '%USERPROFILE%\.electron'
 
 init:
   - git config --global core.autocrlf input
-
 
 install:
   - cmd: powershell Install-Product node $env:nodejs_version x64
@@ -29,5 +27,7 @@ build_script:
 artifacts:
   - path: dist\*.exe
   - path: dist\*.dmg
+  - path: dist\*.AppImage
+  - path: dist\*.snap
 
 test: off
