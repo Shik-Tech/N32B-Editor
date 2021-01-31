@@ -11,7 +11,7 @@ import './App.css';
 import Version from './components/Version';
 
 function App() {
-  const appVersion="v1.0.1";
+  const appVersion = "v1.0.1";
   const knobsPerRow = 8;
 
   const [selectedKnobIndex, setSelectedKnobIndex] = useState(0);
@@ -21,7 +21,7 @@ function App() {
   const [currentPreset, updatePreset] = useState(defaultPreset);
   const [currentPresetIndex, updateCurrentPresetIndex] = useState(0);
   const [currentPresetName, updatePresetName] = useState('Default preset');
-  
+
   useEffect(() => {
     WebMidi.enable((err) => {
       if (err) {
@@ -43,9 +43,11 @@ function App() {
     if (midiOutput && midiInput) {
       setDeviceIsConnected(true);
       midiInput.addListener('programchange', undefined, handleProgramChange);
+      midiInput.addListener('sysex', 'all', handleSysex);
 
       return () => {
         midiInput.removeListener('programchange', undefined, handleProgramChange);
+        midiInput.removeListener('sysex', undefined, handleProgramChange);
       };
     } else {
       setDeviceIsConnected(false);
@@ -67,6 +69,11 @@ function App() {
   const handleProgramChange = e => {
     updateCurrentPresetIndex(e.data[1]);
   }
+
+  const handleSysex = e => {
+    console.log(e);
+  }
+
   return (
     <div className="App">
       {!deviceIsConnected &&

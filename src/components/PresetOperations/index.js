@@ -58,6 +58,10 @@ function PresetOperations(props) {
         });
     }
 
+    // const handleLoadFromDevice = e => {
+    //     midiOutput.sendSysex(124, [7]);
+    // }
+
     return (
         <div className="editorContainer">
             <div className="row editorRow">
@@ -84,7 +88,21 @@ function PresetOperations(props) {
                     Save Preset
                 </button>
             </div>
+
             <div className="seperator"></div>
+
+            {/* <div className="row editorRow">
+                <label>Load from device</label>
+                <button
+                    type="button"
+                    onClick={handleLoadFromDevice}
+                >
+                    Load from Device
+                </button>
+            </div>
+
+            <div className="seperator"></div> */}
+
             <div className="subtitle">
                 Write preset to device
             </div>
