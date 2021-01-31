@@ -7,7 +7,8 @@ const { dialog } = window.remote;
 const jetpack = window.jetpack;
 
 function PresetOperations(props) {
-    const { updatePreset,
+    const {
+        updatePreset,
         currentPreset,
         midiOutput,
         // midiInput,

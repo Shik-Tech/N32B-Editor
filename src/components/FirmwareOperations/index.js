@@ -17,8 +17,7 @@ function FirmwareOperations() {
             const filecontents = event.target.result;
 
             const avrgirl = new AvrgirlArduino({
-                //   // board: 'leonardo'
-                board: 'uno',
+                board: 'leonardo',
                 debug: true
             });
 

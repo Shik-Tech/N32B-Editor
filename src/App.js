@@ -12,6 +12,7 @@ import Version from './components/Version';
 
 function App() {
   const appVersion="v1.0.1";
+  const knobsPerRow = 8;
 
   const [selectedKnobIndex, setSelectedKnobIndex] = useState(0);
   const [deviceIsConnected, setDeviceIsConnected] = useState(false);
@@ -20,8 +21,6 @@ function App() {
   const [currentPreset, updatePreset] = useState(defaultPreset);
   const [currentPresetIndex, updateCurrentPresetIndex] = useState(0);
   const [currentPresetName, updatePresetName] = useState('Default preset');
-
-  const knobsPerRow = 8;
   
   useEffect(() => {
     WebMidi.enable((err) => {

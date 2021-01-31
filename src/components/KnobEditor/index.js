@@ -1,6 +1,16 @@
 import React, { useEffect, useState } from 'react';
 
 function KnobEditor({ selectedKnobIndex, currentPreset, updatePreset }) {
+    const {
+        inverted,
+        type,
+        value,
+        range,
+        // minRange,
+        // maxRange,
+        channel,
+    } = currentPreset.knobs[selectedKnobIndex];
+
     const [typeState, setTypeState] = useState(1);
     const [valueState, setValueState] = useState(0);
     const [valueMaxPropState, setValueMaxPropState] = useState(127);
@@ -43,23 +53,13 @@ function KnobEditor({ selectedKnobIndex, currentPreset, updatePreset }) {
     ]);
 
     useEffect(() => {
-        const {
-            inverted,
-            type,
-            value,
-            range,
-            // minRange,
-            // maxRange,
-            channel,
-        } = currentPreset.knobs[selectedKnobIndex];
-
         setTypeState(type);
         setValueState(value);
         setChannelState(channel);
-        // setMinRangeState(minRange);
-        // setMaxRangeState(maxRange);
         setInvertState(inverted);
         setRangeState(range);
+        // setMinRangeState(minRange);
+        // setMaxRangeState(maxRange);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedKnobIndex]);
 
@@ -142,7 +142,7 @@ function KnobEditor({ selectedKnobIndex, currentPreset, updatePreset }) {
         <div className="editorContainer">
             <div className="row editorRow">
                 <label>Type:</label>
-                <select value={typeState} onChange={handleTypeSelect}>
+                <select value={type} onChange={handleTypeSelect}>
                     <option value={16}>Disable Knob</option>
                     <option value={1}>Control Change</option>
                     <option value={15}>CC & Channel</option>
@@ -157,42 +157,42 @@ function KnobEditor({ selectedKnobIndex, currentPreset, updatePreset }) {
             {!disableAllFields &&
                 <div className="row editorRow">
                     <label>Value:</label>
-                    <input type="number" min={0} max={valueMaxPropState} value={valueState} onChange={handleValueChange} />
+                    <input type="number" min={0} max={valueMaxPropState} value={value} onChange={handleValueChange} />
                 </div>
             }
 
-            {!disableAllFields && (/* typeState === 12 || */ typeState === 15) &&
+            {!disableAllFields && (/* type === 12 || */ type === 15) &&
                 <div className="row editorRow">
                     <label>Channel:</label>
-                    <input type="number" min={1} max={16} value={channelState} onChange={handleChannelChange} />
+                    <input type="number" min={1} max={16} value={channel} onChange={handleChannelChange} />
                 </div>
             }
 
-            {/* {!disableAllFields && (typeState === 11 || typeState === 12) &&
+            {/* {!disableAllFields && (type === 11 || type === 12) &&
                 <div className="row editorRow">
                     <label>Min Range:</label>
                     <input type="number" min={0} max={126} value={minRangeState} onChange={handleMinRangeChange} />
                 </div>
             } */}
 
-            {/* {!disableAllFields && (typeState === 11 || typeState === 12) &&
+            {/* {!disableAllFields && (type === 11 || type === 12) &&
                 <div className="row editorRow">
                     <label>Max Range:</label>
                     <input type="number" min={1} max={127} value={maxRangeState} onChange={handleMaxRangeChange} />
                 </div>
             } */}
 
-            {!disableAllFields && (typeState === 2 || typeState === 3 || typeState === 18) &&
+            {!disableAllFields && (type === 2 || type === 3 || type === 18) &&
                 <div className="row editorRow">
                     <label>Range:</label>
-                    <input type="number" min={1} max={rangeMaxPropState} value={rangeState} onChange={handleRangeChange} />
+                    <input type="number" min={1} max={rangeMaxPropState} value={range} onChange={handleRangeChange} />
                 </div>
             }
 
             {!disableAllFields &&
                 <div className="row editorRow">
                     <label>Invert:</label>
-                    <input type="checkbox" checked={invertState} onChange={handleInvertChange} />
+                    <input type="checkbox" checked={inverted} onChange={handleInvertChange} />
                 </div>
             }
         </div>
