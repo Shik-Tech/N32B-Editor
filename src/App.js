@@ -8,8 +8,11 @@ import {
 } from './components';
 import defaultPreset from './defaultPreset.json';
 import './App.css';
+import Version from './components/Version';
 
 function App() {
+  const appVersion="v1.0.1";
+
   const [selectedKnobIndex, setSelectedKnobIndex] = useState(0);
   const [deviceIsConnected, setDeviceIsConnected] = useState(false);
   const [midiInput, setMidiInput] = useState();
@@ -88,6 +91,7 @@ function App() {
               selectedKnobIndex={selectedKnobIndex}
               setSelectedKnob={setSelectedKnobIndex}
             />
+            <Version appVersion={appVersion} />
           </div>
           <div className="RightSide">
             <div className="row">

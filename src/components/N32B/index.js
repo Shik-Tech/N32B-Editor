@@ -1,6 +1,6 @@
 import React from 'react';
 import { Knobs } from '../../components';
-import "./N32B.css";
+import './N32B.css';
 
 function N32B(props) {
     return (

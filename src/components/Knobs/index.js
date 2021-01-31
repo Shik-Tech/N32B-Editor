@@ -1,6 +1,6 @@
 import React from 'react';
 import Knob from './Knob';
-import "./Knobs.css";
+import './Knobs.css';
 
 const chunks = (arr, size) => {
     const result = [];

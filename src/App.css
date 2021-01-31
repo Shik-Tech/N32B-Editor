@@ -161,6 +161,12 @@ button:disabled {
   margin-bottom: 5px;
 }
 
+.version {
+  font-size: 0.5em;
+  flex: 1;
+  color: #505050;
+}
+
 #gear {
   width: 80px;
   height: 80px;
