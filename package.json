@@ -1,7 +1,7 @@
 {
   "name": "editor",
   "description": "Desktop editor for the N32B midi controller",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "license": "CC BY-NC-SA 4.0",
   "author": {
     "name": "Shik",
@@ -14,13 +14,12 @@
   "build": {
     "appId": "tech.shik.editor",
     "productName": "N32B Editor",
-    "copyright": "Copyright © 2020 SHIK",
+    "copyright": "Copyright © 2021 SHIK",
     "files": [
       "build/**/*",
       "assets/icon.*",
       "node_modules/**/*"
-    ],
-    "npmRebuild": false
+    ]
   },
   "scripts": {
     "start": "react-scripts start",
