@@ -1,8 +1,11 @@
 # N32B-Editor
-A desktop application for editing the N32B midi controller.
-This project uses Electron.js and React.js.
+A desktop application for editing the N32B midi controller.<br />
+This project uses [Electron](https://www.electronjs.org/) and [React](https://reactjs.org/).
 
-## How does it look like?
+The N32B is an open-source midi controller project and a DIY kit.<br />
+You can find more information in our [website](https://shik.tech).
+
+## How does it look?
 ![](N32B-Editor.png)
 
 ## The Electron Project
