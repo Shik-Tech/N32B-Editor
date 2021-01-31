@@ -51,8 +51,6 @@ function PresetOperations(props) {
 
     const handleSaveToDevice = e => {
         const messages = generateSysExFromPreset(currentPreset);
-        
-        console.log(messages);
         forEach(messages, message => {
             midiOutput.sendSysex(124, message);
             // midiOutput.sendSysex(32, message);

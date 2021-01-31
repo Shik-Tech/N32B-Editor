@@ -5,9 +5,9 @@ function KnobEditor({ selectedKnobIndex, currentPreset, updatePreset }) {
     const [valueState, setValueState] = useState(0);
     const [valueMaxPropState, setValueMaxPropState] = useState(127);
     const [channelState, setChannelState] = useState(1);
-    const [minRangeState, setMinRangeState] = useState(0);
-    const [maxRangeState, setMaxRangeState] = useState(127);
-    const [rangeState, setRangeState] = useState(63);
+    // const [minRangeState, setMinRangeState] = useState(0);
+    // const [maxRangeState, setMaxRangeState] = useState(127);
+    const [rangeState, setRangeState] = useState(4);
     const [rangeMaxPropState, setRangeMaxPropState] = useState(127);
     const [invertState, setInvertState] = useState(false);
     const [disableAllFields, setDisableAllFields] = useState(false);
@@ -22,38 +22,49 @@ function KnobEditor({ selectedKnobIndex, currentPreset, updatePreset }) {
                         ...currentPreset.knobs[selectedKnobIndex],
                         inverted: invertState,
                         type: typeState,
-                        valOne: valueState,
-                        valTwo: minRangeState,
-                        valThree: maxRangeState,
-                        valFour: channelState
+                        value: valueState,
+                        range: rangeState,
+                        // minRange: minRangeState,
+                        // maxRange: maxRangeState,
+                        channel: channelState
                     },
                     ...currentPreset.knobs.slice(selectedKnobIndex + 1)
                 ]
-        })
+        });
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [invertState, typeState, valueState, minRangeState, maxRangeState, channelState]);
+    }, [
+        invertState,
+        typeState,
+        valueState,
+        // minRangeState,
+        // maxRangeState,
+        channelState,
+        rangeState
+    ]);
 
     useEffect(() => {
         const {
             inverted,
             type,
-            valOne: value,
-            valTwo: minValue,
-            valThree: maxValue,
-            valFour: channel
+            value,
+            range,
+            // minRange,
+            // maxRange,
+            channel,
         } = currentPreset.knobs[selectedKnobIndex];
 
         setTypeState(type);
         setValueState(value);
         setChannelState(channel);
-        setMinRangeState(minValue);
-        setMaxRangeState(maxValue);
+        // setMinRangeState(minRange);
+        // setMaxRangeState(maxRange);
         setInvertState(inverted);
+        setRangeState(range);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedKnobIndex]);
 
     useEffect(() => {
-        setInvertState(false);
+        setInvertState(invertState || false);
         let valueMaxProp;
         let rangeMaxProp;
         let range = 0;
@@ -95,7 +106,7 @@ function KnobEditor({ selectedKnobIndex, currentPreset, updatePreset }) {
         }
         setValueMaxPropState(valueMaxProp);
         setRangeMaxPropState(rangeMaxProp);
-        setRangeState(range);
+        setRangeState(rangeState || range);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [typeState]);
 
@@ -111,13 +122,13 @@ function KnobEditor({ selectedKnobIndex, currentPreset, updatePreset }) {
         setChannelState(parseInt(e.target.value));
     }
 
-    function handleMinRangeChange(e) {
-        setMinRangeState(parseInt(e.target.value));
-    }
+    // function handleMinRangeChange(e) {
+    //     setMinRangeState(parseInt(e.target.value));
+    // }
 
-    function handleMaxRangeChange(e) {
-        setMaxRangeState(parseInt(e.target.value));
-    }
+    // function handleMaxRangeChange(e) {
+    //     setMaxRangeState(parseInt(e.target.value));
+    // }
 
     function handleRangeChange(e) {
         setRangeState(parseInt(e.target.value));
@@ -135,11 +146,11 @@ function KnobEditor({ selectedKnobIndex, currentPreset, updatePreset }) {
                     <option value={16}>Disable Knob</option>
                     <option value={1}>Control Change</option>
                     <option value={15}>CC & Channel</option>
-                    <option value={11}>CC & Range</option>
-                    <option value={12}>CC, Range & Channel</option>
+                    {/* <option value={11}>CC & Range</option> */}
+                    {/* <option value={12}>CC, Range & Channel</option> */}
                     <option value={2}>NRPN Bipolar</option>
                     <option value={3}>NRPN Unipolar</option>
-                    <option value={18}>NRPN Exponent</option>
+                    <option value={18}>NRPN Extended</option>
                 </select>
             </div>
 
@@ -150,26 +161,26 @@ function KnobEditor({ selectedKnobIndex, currentPreset, updatePreset }) {
                 </div>
             }
 
-            {!disableAllFields && (typeState === 12 || typeState === 15) &&
+            {!disableAllFields && (/* typeState === 12 || */ typeState === 15) &&
                 <div className="row editorRow">
                     <label>Channel:</label>
                     <input type="number" min={1} max={16} value={channelState} onChange={handleChannelChange} />
                 </div>
             }
 
-            {!disableAllFields && (typeState === 11 || typeState === 12) &&
+            {/* {!disableAllFields && (typeState === 11 || typeState === 12) &&
                 <div className="row editorRow">
                     <label>Min Range:</label>
                     <input type="number" min={0} max={126} value={minRangeState} onChange={handleMinRangeChange} />
                 </div>
-            }
+            } */}
 
-            {!disableAllFields && (typeState === 11 || typeState === 12) &&
+            {/* {!disableAllFields && (typeState === 11 || typeState === 12) &&
                 <div className="row editorRow">
                     <label>Max Range:</label>
                     <input type="number" min={1} max={127} value={maxRangeState} onChange={handleMaxRangeChange} />
                 </div>
-            }
+            } */}
 
             {!disableAllFields && (typeState === 2 || typeState === 3 || typeState === 18) &&
                 <div className="row editorRow">
