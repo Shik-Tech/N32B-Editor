@@ -29,7 +29,7 @@
     "ebuild": "npm run build && node_modules/.bin/build",
     "pack": "electron-builder --dir",
     "dist": "npm run build && electron-builder --win --mac",
-    "postinstall": "echo \"tag-prefix=@serialport/bindings@\" > ./node_modules/@serialport/bindings/.prebuild-installrc && electron-builder install-app-deps",
+    "postinstall": "electron-builder install-app-deps",
     "dev": "concurrently \"npm start\" \"wait-on http://localhost:3000 && electron .\""
   },
   "eslintConfig": {
