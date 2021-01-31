@@ -7,7 +7,7 @@ platform:
   - x64
 
 environment:
-  nodejs_version: 12.16.3
+  nodejs_version: 14.15.4
 
 cache:
   - node_modules
