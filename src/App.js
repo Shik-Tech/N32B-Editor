@@ -77,7 +77,7 @@ function App() {
   const handleProgramChange = e => {
     updateCurrentPresetIndex(e.data[1]);
   }
-  
+
   const handleHighResolutionChange = e => {
     updateHighResolution(!!e.target.checked);
   }
@@ -90,7 +90,11 @@ function App() {
     <div className="App">
       {!deviceIsConnected &&
         <div className="deviceNotConnected">
-          <div className="title">Please connect the N32B to your computer with a data usb cable</div>
+          <div className="column">
+            <div className="title">N32B Editor</div>
+            <div className="subtitle">Please connect the N32B to your computer with a data usb cable</div>
+            <sub>* Make sure you connect only one N32B device while using the editor</sub>
+          </div>
         </div>
       }
       {deviceIsConnected &&

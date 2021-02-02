@@ -1,7 +1,6 @@
 html {
   margin: 0px;
   padding: 0px;
-  background: #ffffff;
 }
 
 .App {
@@ -9,10 +8,17 @@ html {
   /* width: 920px; */
   /* height: 480px; */
   height: 100vh;
-
+  
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  
+  background-color: #000000;
+  background-image: url('./components/images/shik-logo-white-orange_1024x1024.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 40px bottom;
+  background-size: 10%;
 }
 
 .title {
@@ -42,6 +48,7 @@ html {
 }
 
 .deviceNotConnected {
+  color: #ffffff;
   flex: 1;
   display: flex;
   flex-direction: row;

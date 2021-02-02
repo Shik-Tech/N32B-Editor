@@ -27,8 +27,8 @@ build_script:
   - yarn dist
   
 artifacts:
-  - path: dist\*.exe
-  - path: dist\*.dmg
-  - path: dist\*.AppImage
+  - path: dist\*1.0.{build}.exe
+  - path: dist\*1.0.{build}.dmg
+  - path: dist\*1.0.{build}.AppImage
 
 test: off
