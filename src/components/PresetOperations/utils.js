@@ -2,100 +2,62 @@ import { forEach } from 'lodash';
 
 export function generateSysExFromPreset(currentPreset) {
     const messages = [];
+    const {
+        highResolution,
+        knobs
+    } = currentPreset;
 
-    forEach(currentPreset.knobs, (knob, key) => {
+    forEach(knobs, (knob, key) => {
         const {
-            inverted,
             type,
-            value,
-            range,
-            // minRange,
-            // maxRange,
+            msb,
+            lsb,
+            minValue,
             channel,
+            maxValue
         } = knob;
 
         const id = knob.hardwareId;
-        // const type = knob.type;
-        // const valOne = knob.valOne;
-        // const valTwo = knob.valTwo;
-        // const valThree = knob.valThree;
-        // const valFour = knob.valFour;
-        // const valCheck = knob.inverted;
-
         const knobMessage = [type, id];
 
         switch (type) {
             // CC
             case 1:
-                knobMessage.push(value);
+                knobMessage.push(msb);
+                knobMessage.push(highResolution ? msb + 32 : 0);
                 knobMessage.push(0);
+                knobMessage.push(minValue);
+                knobMessage.push(maxValue);
                 break;
-            // NPRN bipolar and unipolar
+            // CC & Channel
             case 2:
-            case 3:
-                knobMessage.push(LSHB(value));
-                knobMessage.push(MSHB(value));
-                knobMessage.push(range);
-                break;
-            // CC & Range
-            // case 11:
-            //     knobMessage.push(value);
-            //     knobMessage.push(minRange);
-            //     knobMessage.push(maxRange);
-            //     break;
-            // CC range on separate channel
-            // case 12:
-            //     knobMessage.push(value);
-            //     knobMessage.push(minRange);
-            //     knobMessage.push(maxRange);
-            //     knobMessage.push(channel);
-            //     break;
-            // CC on separate channel
-            case 15:
-                knobMessage.push(value);
+                knobMessage.push(msb);
+                knobMessage.push(highResolution ? msb + 32 : 0);
                 knobMessage.push(channel);
+                knobMessage.push(minValue);
+                knobMessage.push(maxValue);
+                break;
+            // NPRN
+            case 3:
+                knobMessage.push(msb);
+                knobMessage.push(lsb);
+                knobMessage.push(0);
+                knobMessage.push(minValue);
+                knobMessage.push(maxValue);
                 break;
             // Disabled
-            case 16:
+            case 11:
                 break;
-            // NPRN Extended
-            case 18:
-                knobMessage.push(LSHB(value));
-                knobMessage.push(MSHB(value));
-                knobMessage.push(range);
-                break;
-
             default:
                 break;
         }
 
-        const invertMessage = [17, id];
-        if (inverted) {
-            invertMessage.push(1);
-        } else {
-            invertMessage.push(0);
-        }
-
         messages.push(knobMessage);
-        messages.push(invertMessage);
     });
 
     messages.push([9, currentPreset.channel]);
-
-    if (currentPreset.NRPNMSB) {
-        messages.push([19, 0]);
-    } else {
-        messages.push([19, 1]);
-    }
-
+    messages.push([14, currentPreset.highResolution]);
     messages.push([5, currentPreset.presetID]);
 
     return messages;
-}
-
-function MSHB(val) {
-    return Math.floor(val / 128);
-}
-function LSHB(val) {
-    return val % 128;
 }

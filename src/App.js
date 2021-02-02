@@ -21,6 +21,7 @@ function App() {
   const [currentPreset, updatePreset] = useState(defaultPreset);
   const [currentPresetIndex, updateCurrentPresetIndex] = useState(0);
   const [currentPresetName, updatePresetName] = useState('Default preset');
+  const [highResolution, updateHighResolution] = useState(true);
 
   useEffect(() => {
     WebMidi.enable((err) => {
@@ -57,17 +58,28 @@ function App() {
   useEffect(() => {
     if (midiOutput) {
       midiOutput.sendProgramChange(currentPresetIndex, 1);
-      const newPreset = {
-        ...currentPreset,
+
+      updatePreset(prev => ({
+        ...prev,
         presetID: currentPresetIndex
-      }
-      updatePreset(newPreset);
+      }));
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPresetIndex]);
 
+  useEffect(() => {
+    updatePreset(prev => ({
+      ...prev,
+      highResolution
+    }));
+  }, [highResolution]);
+
   const handleProgramChange = e => {
     updateCurrentPresetIndex(e.data[1]);
+  }
+  
+  const handleHighResolutionChange = e => {
+    updateHighResolution(!!e.target.checked);
   }
 
   const handleSysex = e => {
@@ -102,6 +114,7 @@ function App() {
           <div className="RightSide">
             <div className="row">
               <div className="title">Editing Knob: <span className="currentKnob">{currentPreset.knobs[selectedKnobIndex].id}</span></div>
+              <label className="highResolution"><input type="checkbox" checked={highResolution} onChange={handleHighResolutionChange} /> Hi-Res</label>
             </div>
             <KnobEditor
               selectedKnobIndex={selectedKnobIndex}

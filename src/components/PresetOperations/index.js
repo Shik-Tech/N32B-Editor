@@ -50,13 +50,18 @@ function PresetOperations(props) {
         }
     }
 
-    const handleSaveToDevice = e => {
+    const handleSaveToDevice = async e => {
+        // await showWarning();
         const messages = generateSysExFromPreset(currentPreset);
         forEach(messages, message => {
             midiOutput.sendSysex(124, message);
             // midiOutput.sendSysex(32, message);
         });
     }
+
+    // async function showWarning() {
+    //     return;
+    // }
 
     // const handleLoadFromDevice = e => {
     //     midiOutput.sendSysex(124, [7]);
@@ -65,28 +70,30 @@ function PresetOperations(props) {
     return (
         <div className="editorContainer">
             <div className="row editorRow">
-                <label>Load to editor:</label>
-                <button
-                    type="button"
-                    onClick={() => fileInput.current.click()}
-                >
-                    Load Preset
+                <div className="column">
+                    <button
+                        type="button"
+                        onClick={() => fileInput.current.click()}
+                    >
+                        Load Preset<br />
+                        to the editor
                 </button>
-                <input
-                    type="file"
-                    ref={fileInput}
-                    onChange={handleLoadPreset}
-                />
-            </div>
-            <div className="row editorRow">
-                <label>Backup preset:</label>
-
-                <button
-                    type="button"
-                    onClick={handleSavePreset}
-                >
-                    Save Preset
+                    <input
+                        className="hiddenField"
+                        type="file"
+                        ref={fileInput}
+                        onChange={handleLoadPreset}
+                    />
+                </div>
+                <div className="column">
+                    <button
+                        type="button"
+                        onClick={handleSavePreset}
+                    >
+                        Save Preset<br />
+                        to your computer
                 </button>
+                </div>
             </div>
 
             <div className="seperator"></div>

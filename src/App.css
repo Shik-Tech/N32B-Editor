@@ -58,7 +58,8 @@ html {
 .column {
   flex-direction: column;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+  justify-content: center;
 }
 
 .operationsContainer {
@@ -88,16 +89,17 @@ html {
   background: #000000;
   color: #ffffff;
   flex-direction: column;
-
 }
 
 select,
 input {
   border: 2px solid #ffffff;
   padding: 5px;
+  font-size: 0.9em;
   outline: none;
   font-weight: bold;
-  border-radius: 10px;
+  border-radius: 8px;
+  text-align: center;
   /* flex: 1; */
   justify-content: flex-start;
 }
@@ -152,19 +154,34 @@ button:disabled {
 .editorContainer label,
 .editorContainer select {
   display: flex;
-  /* flex: 3; */
-  align-content: center;
   align-items: center;
+  margin-bottom: 2px;
+  font-size: 0.8em;
 }
 
 .editorRow {
   margin-bottom: 5px;
+  margin: 0px 5px 5px 5px;
+}
+.editorRow .column {
+  flex: 1;
+  margin: 5px;
 }
 
 .version {
   font-size: 0.5em;
   flex: 1;
   color: #505050;
+}
+.highResolution {
+  font-size: 0.8em;
+}
+.highResolution input {
+  width: 10px;
+  height: 10px;  
+}
+.hiddenField {
+  display: none !important;
 }
 
 #gear {
