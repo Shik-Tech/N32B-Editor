@@ -2,9 +2,12 @@ import React, { useRef } from 'react';
 import { generateSysExFromPreset } from './utils';
 // import gear from "../images/gear4.svg";
 import { forEach } from 'lodash';
+import Popup from 'react-popup';
 
 const { dialog } = window.remote;
 const jetpack = window.jetpack;
+
+
 
 function PresetOperations(props) {
     const {
@@ -50,13 +53,33 @@ function PresetOperations(props) {
         }
     }
 
-    const handleSaveToDevice = async e => {
-        // await showWarning();
-        const messages = generateSysExFromPreset(currentPreset);
-        forEach(messages, message => {
-            midiOutput.sendSysex(124, message);
-            // midiOutput.sendSysex(32, message);
+    const handleSaveToDevice = e => {
+        Popup.create({
+            title: 'Write to device',
+            content: `You are about to overwrite "Preset ${currentPreset.presetID}".`,
+            buttons: {
+                left: [{
+                    text: 'Cancel',
+                    className: 'danger',
+                    action: function () {
+                        Popup.close();
+                    }
+                }],
+                right: [{
+                    text: 'Write to Device',
+                    className: 'success',
+                    action: function () {
+                        const messages = generateSysExFromPreset(currentPreset);
+                        forEach(messages, message => {
+                            midiOutput.sendSysex(124, message);
+                            // midiOutput.sendSysex(32, message);
+                        });
+                        Popup.close();
+                    }
+                }]
+            }
         });
+
     }
 
     // async function showWarning() {
@@ -89,6 +112,7 @@ function PresetOperations(props) {
                     <button
                         type="button"
                         onClick={handleSavePreset}
+                        className="good"
                     >
                         Save Preset<br />
                         to your computer
@@ -110,9 +134,6 @@ function PresetOperations(props) {
 
             <div className="seperator"></div> */}
 
-            <div className="subtitle">
-                Write preset to device
-            </div>
             <div className="row editorRow">
                 <label>Write to:</label>
                 <select value={currentPresetIndex} onChange={handlePresetSelect}>
@@ -125,6 +146,7 @@ function PresetOperations(props) {
                 <button
                     type="button"
                     onClick={handleSaveToDevice}
+                    className="danger"
                 >
                     Write to Device
                 </button>

@@ -55,6 +55,7 @@
     "lodash": "^4.17.20",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-popup": "^0.10.0",
     "react-scripts": "4.0.0",
     "wait-on": "^5.2.0",
     "webmidi": "^2.5.1"

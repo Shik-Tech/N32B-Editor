@@ -31,11 +31,11 @@
     /* border-color: #ff9c0e; */
 }
 
-.Knob:hover,
-.Knob-selected {
-    box-shadow: 0px 0px 20px 10px rgba(255, 156, 14, 0.7);
+.Knob:hover {
+    box-shadow: 0px 0px 10px 10px rgba(80, 48, 4, 0.2);
 }
 
 .Knob-selected {
-    border-color: #ff9c0e;
+    /* border-color: #ff9c0e; */
+    box-shadow: 0px 0px 10px 10px rgba(255, 156, 14, 0.6) !important;
 }

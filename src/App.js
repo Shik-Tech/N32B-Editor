@@ -7,11 +7,14 @@ import {
   PresetOperations
 } from './components';
 import defaultPreset from './defaultPreset.json';
-import './App.css';
 import Version from './components/Version';
+import Popup from 'react-popup';
+
+import './App.css';
+import './Popup.css';
 
 function App() {
-  const appVersion = "v1.0.7";
+  const appVersion = "v1.0.8";
   const knobsPerRow = 8;
 
   const [selectedKnobIndex, setSelectedKnobIndex] = useState(0);
@@ -51,6 +54,7 @@ function App() {
         midiInput.removeListener('sysex', undefined, handleProgramChange);
       };
     } else {
+      Popup.close();
       setDeviceIsConnected(false);
     }
   }, [midiInput, midiOutput]);
@@ -120,21 +124,27 @@ function App() {
               <div className="title">Editing Knob: <span className="currentKnob">{currentPreset.knobs[selectedKnobIndex].id}</span></div>
               <label className="highResolution"><input type="checkbox" checked={highResolution} onChange={handleHighResolutionChange} /> Hi-Res</label>
             </div>
-            <KnobEditor
-              selectedKnobIndex={selectedKnobIndex}
-              updatePreset={updatePreset}
-              currentPreset={currentPreset}
-            />
             <div className="seperator"></div>
-            <PresetOperations
-              updatePreset={updatePreset}
-              currentPreset={currentPreset}
-              midiInput={midiInput}
-              midiOutput={midiOutput}
-              updatePresetName={updatePresetName}
-              currentPresetIndex={currentPresetIndex}
-              updateCurrentPresetIndex={updateCurrentPresetIndex}
-            />
+            <div className="row flex-2">
+              <KnobEditor
+                selectedKnobIndex={selectedKnobIndex}
+                updatePreset={updatePreset}
+                currentPreset={currentPreset}
+              />
+            </div>
+            <div className="seperator"></div>
+            <div className="row">
+              <PresetOperations
+                updatePreset={updatePreset}
+                currentPreset={currentPreset}
+                midiInput={midiInput}
+                midiOutput={midiOutput}
+                updatePresetName={updatePresetName}
+                currentPresetIndex={currentPresetIndex}
+                updateCurrentPresetIndex={updateCurrentPresetIndex}
+              />
+            </div>
+
             {/* <div className="seperator"></div>
             <FirmwareOperations /> */}
           </div>
