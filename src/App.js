@@ -11,7 +11,7 @@ import './App.css';
 import Version from './components/Version';
 
 function App() {
-  const appVersion = "v1.0.8";
+  const appVersion = "v1.0.7";
   const knobsPerRow = 8;
 
   const [selectedKnobIndex, setSelectedKnobIndex] = useState(0);
