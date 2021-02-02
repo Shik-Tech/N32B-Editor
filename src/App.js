@@ -51,7 +51,7 @@ function App() {
 
       return () => {
         midiInput.removeListener('programchange', undefined, handleProgramChange);
-        midiInput.removeListener('sysex', undefined, handleProgramChange);
+        midiInput.removeListener('sysex', undefined, handleSysex);
       };
     } else {
       Popup.close();
@@ -68,8 +68,7 @@ function App() {
         presetID: currentPresetIndex
       }));
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [currentPresetIndex]);
+  }, [currentPresetIndex, midiOutput]);
 
   useEffect(() => {
     updatePreset(prev => ({
