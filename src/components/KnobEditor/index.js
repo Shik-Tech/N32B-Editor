@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { validateValueRange } from '../PresetOperations/utils';
 
 function KnobEditor({ selectedKnobIndex, currentPreset, updatePreset }) {
     const {
@@ -76,23 +77,23 @@ function KnobEditor({ selectedKnobIndex, currentPreset, updatePreset }) {
     }
 
     function handleValueChange(e) {
-        setMsbState(parseInt(e.target.value));
+        setMsbState(parseInt(validateValueRange(e.target)));
     }
 
     function handleLSBChange(e) {
-        setLsbState(parseInt(e.target.value));
+        setLsbState(parseInt(validateValueRange(e.target)));
     }
 
     function handleChannelChange(e) {
-        setChannelState(parseInt(e.target.value));
+        setChannelState(parseInt(validateValueRange(e.target)));
     }
 
     function handleMinValueChange(e) {
-        setMinMsbState(e.target.value);
+        setMinMsbState(validateValueRange(e.target));
     }
 
     function handleMaxValueChange(e) {
-        setMaxMsbState(e.target.value);
+        setMaxMsbState(validateValueRange(e.target));
     }
 
     return (

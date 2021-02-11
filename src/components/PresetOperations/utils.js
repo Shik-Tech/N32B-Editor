@@ -61,3 +61,7 @@ export function generateSysExFromPreset(currentPreset) {
 
     return messages;
 }
+
+export function validateValueRange({ value, min, max }) {
+    return Math.max(Number(min), Math.min(Number(max), Number(value)));
+}
