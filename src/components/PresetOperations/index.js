@@ -71,8 +71,8 @@ function PresetOperations(props) {
                     action: function () {
                         const messages = generateSysExFromPreset(currentPreset);
                         forEach(messages, message => {
-                            midiOutput.sendSysex(124, message);
-                            // midiOutput.sendSysex(32, message);
+                            // midiOutput.sendSysex(124, message);
+                            midiOutput.sendSysex(32, message);
                         });
                         Popup.close();
                     }

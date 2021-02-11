@@ -101,7 +101,7 @@ html {
   display: flex;
   flex: 1;
   padding: 8px 10px;
-  background: #000000;
+  background: #131313;
   color: #ffffff;
   flex-direction: column;
 }
@@ -138,55 +138,57 @@ input[type=file] {
 
 button {
   cursor: pointer;
-  background-color: #000000;
+  background-color: #1d1d1d;
   outline: none;
-  border-style: outset;
+  border-style: solid;
   border-width: 1px;
-  border-color: #ff9c0e;
   border-radius: 5px;
   color: #ffffff;
   padding: 8px;
 }
 
 button:hover {
-  border-color: #fdc06a;
+  color: #fdc06a;
 }
 
 button:active {
-  border-color: #bd6e00;
+  color: #bd6e00;
 }
 
 button:disabled {
-  background-color: gray;
+  color: gray;
 }
 
-.danger {
-  border-color: #ff0e36;
-}
+/* .danger {
+  color: #ff0e36;
+} */
 
 .danger:hover {
-  border-color: #bd003f;
+  color: #bd003f;
 }
 
 .danger:active {
-  border-color: #8a0219;
+  color: #8a0219;
 }
 
-.good {
-  border-color: #6eff0e;
-}
+/* .good {
+  color: #6eff0e;
+} */
 
 .good:hover {
-  border-color: #2cbd00;
+  color: #2cbd00;
 }
 
 .good:active {
-  border-color: #028a02;
+  color: #028a02;
 }
 
 .seperator {
-  border-top: 1px dotted #464646;
-  margin: 10px 0;
+  margin: 12px 0;
+}
+
+.seperator.border {
+  border-top: 5px solid #333333;
 }
 
 .editorContainer {

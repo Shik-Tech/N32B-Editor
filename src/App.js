@@ -14,7 +14,7 @@ import './App.css';
 import './Popup.css';
 
 function App() {
-  const appVersion = "v1.0.8";
+  const appVersion = "v1.0.9";
   const knobsPerRow = 8;
 
   const [selectedKnobIndex, setSelectedKnobIndex] = useState(0);
@@ -131,7 +131,7 @@ function App() {
                 currentPreset={currentPreset}
               />
             </div>
-            <div className="seperator"></div>
+            <div className="seperator border"></div>
             <div className="row">
               <PresetOperations
                 updatePreset={updatePreset}
