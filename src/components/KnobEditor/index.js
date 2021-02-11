@@ -52,6 +52,7 @@ function KnobEditor({ selectedKnobIndex, currentPreset, updatePreset }) {
     useEffect(() => {
         setTypeState(type);
         setMsbState(msb);
+        setLsbState(lsb);
         setMinMsbState(minValue);
         setMaxMsbState(maxValue);
         setChannelState(channel);
@@ -68,7 +69,7 @@ function KnobEditor({ selectedKnobIndex, currentPreset, updatePreset }) {
             setMaxValueRangeState(127);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [currentPreset.highResolution]);
+    }, [currentPreset.highResolution, typeState]);
 
     function handleTypeSelect(e) {
         setTypeState(parseInt(e.target.value));

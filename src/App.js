@@ -120,26 +120,30 @@ function App() {
           </div>
           <div className="RightSide">
             <div className="row">
-              <div className="title">Editing Knob: <span className="currentKnob">{currentPreset.knobs[selectedKnobIndex].id}</span></div>
-              <label className="highResolution"><input type="checkbox" checked={highResolution} onChange={handleHighResolutionChange} /> Hi-Res</label>
+              <div className="title">
+                Editing Knob: <span className="currentKnob">{currentPreset.knobs[selectedKnobIndex].id}</span>
+              </div>
+              <label className="highResolution">
+                <input type="checkbox" checked={highResolution} onChange={handleHighResolutionChange} /> Hi-Res
+              </label>
             </div>
             <div className="seperator"></div>
             <div className="row flex-2">
               <KnobEditor
                 selectedKnobIndex={selectedKnobIndex}
-                updatePreset={updatePreset}
                 currentPreset={currentPreset}
+                updatePreset={updatePreset}
               />
             </div>
             <div className="seperator border"></div>
             <div className="row">
               <PresetOperations
-                updatePreset={updatePreset}
                 currentPreset={currentPreset}
                 midiInput={midiInput}
                 midiOutput={midiOutput}
-                updatePresetName={updatePresetName}
                 currentPresetIndex={currentPresetIndex}
+                updatePreset={updatePreset}
+                updatePresetName={updatePresetName}
                 updateCurrentPresetIndex={updateCurrentPresetIndex}
               />
             </div>
