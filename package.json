@@ -1,7 +1,7 @@
 {
   "name": "n32b_editor",
   "description": "Desktop editor for the N32B midi controller",
-  "version": "1.0.9",
+  "version": "1.0.11",
   "license": "CC BY-NC-SA 4.0",
   "author": {
     "name": "Shik",

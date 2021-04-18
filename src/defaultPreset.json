@@ -9,8 +9,6 @@
             "type": 1,
             "msb": 0,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -19,8 +17,6 @@
             "type": 1,
             "msb": 1,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -29,8 +25,6 @@
             "type": 1,
             "msb": 2,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -39,8 +33,6 @@
             "type": 1,
             "msb": 3,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -49,8 +41,6 @@
             "type": 1,
             "msb": 4,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -59,8 +49,6 @@
             "type": 1,
             "msb": 5,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -69,8 +57,6 @@
             "type": 1,
             "msb": 6,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -79,8 +65,6 @@
             "type": 1,
             "msb": 7,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -89,8 +73,6 @@
             "type": 1,
             "msb": 8,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -99,8 +81,6 @@
             "type": 1,
             "msb": 9,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -109,8 +89,6 @@
             "type": 1,
             "msb": 10,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -119,8 +97,6 @@
             "type": 1,
             "msb": 11,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -129,8 +105,6 @@
             "type": 1,
             "msb": 12,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -139,8 +113,6 @@
             "type": 1,
             "msb": 13,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -149,8 +121,6 @@
             "type": 1,
             "msb": 14,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -159,8 +129,6 @@
             "type": 1,
             "msb": 15,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -169,8 +137,6 @@
             "type": 1,
             "msb": 16,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -179,8 +145,6 @@
             "type": 1,
             "msb": 17,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -189,8 +153,6 @@
             "type": 1,
             "msb": 18,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -199,8 +161,6 @@
             "type": 1,
             "msb": 19,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -209,8 +169,6 @@
             "type": 1,
             "msb": 20,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -219,8 +177,6 @@
             "type": 1,
             "msb": 21,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -229,8 +185,6 @@
             "type": 1,
             "msb": 22,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -239,8 +193,6 @@
             "type": 1,
             "msb": 23,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -249,8 +201,6 @@
             "type": 1,
             "msb": 24,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -259,8 +209,6 @@
             "type": 1,
             "msb": 25,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -269,8 +217,6 @@
             "type": 1,
             "msb": 26,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -279,8 +225,6 @@
             "type": 1,
             "msb": 27,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -289,8 +233,6 @@
             "type": 1,
             "msb": 28,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -299,8 +241,6 @@
             "type": 1,
             "msb": 29,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -309,8 +249,6 @@
             "type": 1,
             "msb": 30,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         },
         {
@@ -319,8 +257,6 @@
             "type": 1,
             "msb": 31,
             "lsb": 0,
-            "minValue": 0,
-            "maxValue": 127,
             "channel": 0
         }
     ]

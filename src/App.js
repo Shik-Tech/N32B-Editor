@@ -14,7 +14,7 @@ import './App.css';
 import './Popup.css';
 
 function App() {
-  const appVersion = "v1.0.9";
+  const appVersion = "v1.0.11";
   const knobsPerRow = 8;
 
   const [selectedKnobIndex, setSelectedKnobIndex] = useState(0);

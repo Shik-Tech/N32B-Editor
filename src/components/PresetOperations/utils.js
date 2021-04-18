@@ -12,9 +12,7 @@ export function generateSysExFromPreset(currentPreset) {
             type,
             msb,
             lsb,
-            minValue,
-            channel,
-            maxValue
+            channel
         } = knob;
 
         const id = knob.hardwareId;
@@ -26,24 +24,18 @@ export function generateSysExFromPreset(currentPreset) {
                 knobMessage.push(msb);
                 knobMessage.push(highResolution ? msb + 32 : 0);
                 knobMessage.push(0);
-                knobMessage.push(minValue);
-                knobMessage.push(maxValue);
                 break;
             // CC & Channel
             case 2:
                 knobMessage.push(msb);
                 knobMessage.push(highResolution ? msb + 32 : 0);
                 knobMessage.push(channel);
-                knobMessage.push(minValue);
-                knobMessage.push(maxValue);
                 break;
             // NPRN
             case 3:
                 knobMessage.push(msb);
                 knobMessage.push(lsb);
                 knobMessage.push(0);
-                knobMessage.push(minValue);
-                knobMessage.push(maxValue);
                 break;
             // Disabled
             case 11:

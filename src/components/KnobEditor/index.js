@@ -6,16 +6,12 @@ function KnobEditor({ selectedKnobIndex, currentPreset, updatePreset }) {
         type,
         msb,
         lsb,
-        minValue,
-        maxValue,
         channel,
     } = currentPreset.knobs[selectedKnobIndex];
 
     const [typeState, setTypeState] = useState(1);
     const [msbState, setMsbState] = useState(0);
     const [lsbState, setLsbState] = useState(0);
-    const [maxMsbState, setMaxMsbState] = useState(127);
-    const [minMsbState, setMinMsbState] = useState(0);
     const [channelState, setChannelState] = useState(1);
     const [disableAllFields, setDisableAllFields] = useState(false);
     const [maxValueRangeState, setMaxValueRangeState] = useState(31);
@@ -33,8 +29,6 @@ function KnobEditor({ selectedKnobIndex, currentPreset, updatePreset }) {
                         type: typeState,
                         msb: msbState,
                         lsb: lsbState,
-                        minValue: minMsbState,
-                        maxValue: maxMsbState,
                         channel: channelState
                     },
                     ...currentPreset.knobs.slice(selectedKnobIndex + 1)
@@ -45,8 +39,6 @@ function KnobEditor({ selectedKnobIndex, currentPreset, updatePreset }) {
         typeState,
         msbState,
         lsbState,
-        minMsbState,
-        maxMsbState,
         channelState
     ]);
 
@@ -54,8 +46,6 @@ function KnobEditor({ selectedKnobIndex, currentPreset, updatePreset }) {
         setTypeState(type);
         setMsbState(msb);
         setLsbState(lsb);
-        setMinMsbState(minValue);
-        setMaxMsbState(maxValue);
         setChannelState(channel);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedKnobIndex]);
@@ -88,14 +78,6 @@ function KnobEditor({ selectedKnobIndex, currentPreset, updatePreset }) {
         setChannelState(parseInt(validateValueRange(e.target)));
     }
 
-    function handleMinValueChange(e) {
-        setMinMsbState(validateValueRange(e.target));
-    }
-
-    function handleMaxValueChange(e) {
-        setMaxMsbState(validateValueRange(e.target));
-    }
-
     return (
         <div className="editorContainer">
             <div className="row editorRow">
@@ -123,49 +105,17 @@ function KnobEditor({ selectedKnobIndex, currentPreset, updatePreset }) {
                                     <input type="number" min={0} max={127} value={lsb} onChange={handleLSBChange} />
                                 </>
                             }
+                            {type === 2 &&
+                                <>
+                                    <label>Channel</label>
+                                    <input type="number" min={1} max={16} value={channel} onChange={handleChannelChange} />
+                                </>
+                            }
                         </div>
                     </div>
 
-                    <div className="row editorRow">
-                        <div className="column">
-                            <label>{type === 3 ? "MSB Min Value" : "Min Value"}</label>
-                            <input type="number" min={0} max={127} value={minValue} onChange={handleMinValueChange} />
-                        </div>
-
-                        <div className="column">
-                            <label>{type === 3 ? "MSB Max Value" : "Max Value"}</label>
-                            <input type="number" min={0} max={127} value={maxValue} onChange={handleMaxValueChange} />
-                        </div>
-                    </div>
-
-                    {type === 2 &&
-                        <div className="row editorRow">
-                            <div className="column">
-                                <label>Channel</label>
-                                <input type="number" min={1} max={16} value={channel} onChange={handleChannelChange} />
-                            </div>
-                            <div className="column"></div>
-                        </div>
-                    }
                 </>
             }
-
-
-            {/* {!disableAllFields && (type === 11 || type === 12) &&
-                <div className="row editorRow">
-                    <label>Min Range:</label>
-                    <input type="number" min={0} max={126} value={minRangeState} onChange={handleMinRangeChange} />
-                </div>
-            } */}
-
-            {/* {!disableAllFields && (type === 11 || type === 12) &&
-                <div className="row editorRow">
-                    <label>Max Range:</label>
-                    <input type="number" min={1} max={127} value={maxRangeState} onChange={handleMaxRangeChange} />
-                </div>
-            } */}
-
-
         </div>
     )
 }
