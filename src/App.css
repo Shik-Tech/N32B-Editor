@@ -87,17 +87,17 @@ html {
   color: #ff9c0e;
 }
 
-.LeftSide {
+.leftSide {
   width: 594px;
   padding: 8px 10px;
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #131313;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
 }
 
 /* Main column */
-.RightSide {
+.rightSide {
   display: flex;
   flex: 1;
   padding: 8px 10px;
@@ -217,6 +217,7 @@ button:disabled {
 }
 
 .version {
+  padding-top: 6px;
   font-size: 0.5em;
   flex: 1;
   color: #505050;

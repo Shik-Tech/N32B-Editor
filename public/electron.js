@@ -6,8 +6,8 @@ let mainWindow;
  
 function createWindow() {
     mainWindow = new BrowserWindow({
-        width:940,
-        height:490,
+        width:950,
+        height:500,
         show: false,
         webPreferences: {
             worldSafeExecuteJavaScript: true,

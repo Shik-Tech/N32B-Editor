@@ -14,7 +14,7 @@ import './App.css';
 import './Popup.css';
 
 function App() {
-  const appVersion = "v1.0.11";
+  const appVersion = "v1.0.12";
   const knobsPerRow = 8;
 
   const [selectedKnobIndex, setSelectedKnobIndex] = useState(0);
@@ -102,7 +102,7 @@ function App() {
       }
       {deviceIsConnected &&
         <>
-          <div className="LeftSide">
+          <div className="leftSide">
             <div className="row">
               <div className="title">N32B Editor</div>
               <div className="row">
@@ -118,7 +118,7 @@ function App() {
             />
             <Version appVersion={appVersion} />
           </div>
-          <div className="RightSide">
+          <div className="rightSide">
             <div className="row">
               <div className="title">
                 Editing Knob: <span className="currentKnob">{currentPreset.knobs[selectedKnobIndex].id}</span>

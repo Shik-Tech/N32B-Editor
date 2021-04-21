@@ -5,11 +5,11 @@
     margin: 8px -15px -8px 15px; */
 }
 .N32B {
-    background-image: url('./n32b-device-bg.png');
+    background-image: url('./n32b-device.png');
     background-repeat: no-repeat;
-    /* background-size: contain; */
+    background-size: contain;
     /* height: 100vh; */
-    width: 604px;
-    height: 406px;
+    width: 605px;
+    height: 404px;
     /* flex: 1; */
 }

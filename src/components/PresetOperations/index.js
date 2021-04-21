@@ -120,7 +120,7 @@ function PresetOperations(props) {
                 </div>
             </div>
 
-            <div className="seperator"></div>
+            <div className="seperator border"></div>
 
             {/* <div className="row editorRow">
                 <label>Load from device</label>
