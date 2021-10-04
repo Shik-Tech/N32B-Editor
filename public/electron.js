@@ -8,6 +8,7 @@ function createWindow() {
     mainWindow = new BrowserWindow({
         width:950,
         height:500,
+        resizable: false,
         show: false,
         webPreferences: {
             worldSafeExecuteJavaScript: true,
