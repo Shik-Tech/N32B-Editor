@@ -1,0 +1,261 @@
+{
+    "presetID": 0,
+    "knobs": [
+        {
+            "id": 1,
+            "hardwareId": 15,
+            "type": 1,
+            "msb": 0,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 2,
+            "hardwareId": 14,
+            "type": 1,
+            "msb": 1,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 3,
+            "hardwareId": 12,
+            "type": 1,
+            "msb": 2,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 4,
+            "hardwareId": 9,
+            "type": 1,
+            "msb": 3,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 5,
+            "hardwareId": 31,
+            "type": 1,
+            "msb": 4,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 6,
+            "hardwareId": 24,
+            "type": 1,
+            "msb": 5,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 7,
+            "hardwareId": 20,
+            "type": 1,
+            "msb": 6,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 8,
+            "hardwareId": 16,
+            "type": 1,
+            "msb": 7,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 9,
+            "hardwareId": 13,
+            "type": 1,
+            "msb": 8,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 10,
+            "hardwareId": 11,
+            "type": 1,
+            "msb": 9,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 11,
+            "hardwareId": 10,
+            "type": 1,
+            "msb": 10,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 12,
+            "hardwareId": 2,
+            "type": 1,
+            "msb": 11,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 13,
+            "hardwareId": 30,
+            "type": 1,
+            "msb": 12,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 14,
+            "hardwareId": 25,
+            "type": 1,
+            "msb": 13,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 15,
+            "hardwareId": 21,
+            "type": 1,
+            "msb": 14,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 16,
+            "hardwareId": 17,
+            "type": 1,
+            "msb": 15,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 17,
+            "hardwareId": 8,
+            "type": 1,
+            "msb": 16,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 18,
+            "hardwareId": 7,
+            "type": 1,
+            "msb": 17,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 19,
+            "hardwareId": 4,
+            "type": 1,
+            "msb": 18,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 20,
+            "hardwareId": 1,
+            "type": 1,
+            "msb": 19,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 21,
+            "hardwareId": 29,
+            "type": 1,
+            "msb": 20,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 22,
+            "hardwareId": 26,
+            "type": 1,
+            "msb": 21,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 23,
+            "hardwareId": 22,
+            "type": 1,
+            "msb": 22,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 24,
+            "hardwareId": 18,
+            "type": 1,
+            "msb": 23,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 25,
+            "hardwareId": 6,
+            "type": 1,
+            "msb": 24,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 26,
+            "hardwareId": 5,
+            "type": 1,
+            "msb": 25,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 27,
+            "hardwareId": 3,
+            "type": 1,
+            "msb": 26,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 28,
+            "hardwareId": 0,
+            "type": 1,
+            "msb": 27,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 29,
+            "hardwareId": 28,
+            "type": 1,
+            "msb": 28,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 30,
+            "hardwareId": 27,
+            "type": 1,
+            "msb": 29,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 31,
+            "hardwareId": 23,
+            "type": 1,
+            "msb": 30,
+            "lsb": 0,
+            "channel": 0
+        },
+        {
+            "id": 32,
+            "hardwareId": 19,
+            "type": 1,
+            "msb": 31,
+            "lsb": 0,
+            "channel": 0
+        }
+    ]
+}

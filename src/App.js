@@ -3,10 +3,9 @@ import WebMidi from 'webmidi';
 import {
   N32B,
   KnobEditor,
-  // FirmwareOperations,
   PresetOperations
 } from './components';
-import defaultPreset from './defaultPreset.json';
+import { defaultPresetMK1, defaultPresetMK2 } from './presetTemplates';
 import Version from './components/Version';
 import Popup from 'react-popup';
 
@@ -14,14 +13,14 @@ import './App.css';
 import './Popup.css';
 
 function App() {
-  const appVersion = "v1.0.12";
+  const appVersion = "v1.1.0";
   const knobsPerRow = 8;
 
   const [selectedKnobIndex, setSelectedKnobIndex] = useState(0);
   const [deviceIsConnected, setDeviceIsConnected] = useState(false);
   const [midiInput, setMidiInput] = useState();
   const [midiOutput, setMidiOutput] = useState();
-  const [currentPreset, updatePreset] = useState(defaultPreset);
+  const [currentPreset, updatePreset] = useState();
   const [currentPresetIndex, updateCurrentPresetIndex] = useState(0);
   const [currentPresetName, updatePresetName] = useState('Default preset');
   const [highResolution, updateHighResolution] = useState(true);
@@ -32,13 +31,25 @@ function App() {
         console.log("WebMidi could not be enabled.", err);
       }
       WebMidi.addListener("connected", function (e) {
-        setMidiInput(WebMidi.getInputByName("SHIK N32B"));
-        setMidiOutput(WebMidi.getOutputByName("SHIK N32B"));
+        if (WebMidi.getInputByName("N32B MK2")) {
+          updatePreset(defaultPresetMK2);
+          setMidiInput(WebMidi.getInputByName("N32B MK2"));
+          setMidiOutput(WebMidi.getOutputByName("N32B MK2"));
+        } else if (WebMidi.getInputByName("N32B")) {
+          updatePreset(defaultPresetMK1);
+          setMidiInput(WebMidi.getInputByName("N32B"));
+          setMidiOutput(WebMidi.getOutputByName("N32B"));
+        }
       });
 
       WebMidi.addListener("disconnected", function (e) {
-        setMidiInput(WebMidi.getInputByName("SHIK N32B"));
-        setMidiOutput(WebMidi.getOutputByName("SHIK N32B"));
+        if (WebMidi.getInputByName("N32B MK2")) {
+          setMidiInput(WebMidi.getInputByName("N32B MK2"));
+          setMidiOutput(WebMidi.getOutputByName("N32B MK2"));
+        } else if (WebMidi.getInputByName("N32B")) {
+          setMidiInput(WebMidi.getInputByName("N32B"));
+          setMidiOutput(WebMidi.getOutputByName("N32B"));
+        }
       });
     }, true);
   });
@@ -147,9 +158,6 @@ function App() {
                 updateCurrentPresetIndex={updateCurrentPresetIndex}
               />
             </div>
-
-            {/* <div className="seperator"></div>
-            <FirmwareOperations /> */}
           </div>
         </>
       }
