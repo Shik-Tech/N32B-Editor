@@ -2,13 +2,13 @@ import { map } from 'lodash';
 import React from 'react';
 import KNOB_TYPES from './knobTypes';
 
-function ChannelSelect({ channel, handleChannelChange }) {
+function ChannelSelect({ disabled, channel, handleChannelChange }) {
     const options = [];
     for (let i = 0; i < 16; i++) {
         options[i] = i + 1;
     }
     return (
-        <select value={channel} onChange={handleChannelChange}>
+        <select disabled={disabled} value={channel} onChange={handleChannelChange}>
             <option value={0} key={0}>Use Global Channel</option>
             {map(options, value =>
                 <option value={value} key={value}>Channel {value}</option>
@@ -18,7 +18,6 @@ function ChannelSelect({ channel, handleChannelChange }) {
 }
 
 function Form({
-    enable,
     type,
     value,
     channel,
@@ -28,18 +27,25 @@ function Form({
     handleChannelChange,
     handleInvertChange
 }) {
+    const isDisabled = type === KNOB_TYPES.DISABLE_KNOB;
     return (
         <>
             <div className="row editorRow">
                 <div className="column">
+                    <label>Type</label>
                     <select select={type} value={type} onChange={handleTypeSelect}>
                         <option value={KNOB_TYPES.DISABLE_KNOB}>Disabled</option>
                         <option value={KNOB_TYPES.CONTROL_CHANGE}>Control Change</option>
                     </select>
                 </div>
+                {!isDisabled &&
+                    <div className="column">
+                        <label>Channel</label>
+                        <ChannelSelect channel={channel} handleChannelChange={handleChannelChange} />
+                    </div>
+                }
             </div>
-
-            {type !== KNOB_TYPES.DISABLE_KNOB &&
+            {!isDisabled &&
                 <div className="row editorRow">
                     <div className="column">
                         <label>Control Number</label>
@@ -47,8 +53,10 @@ function Form({
                     </div>
 
                     <div className="column">
-                        <label>Channel</label>
-                        <ChannelSelect channel={channel} handleChannelChange={handleChannelChange} />
+                        <label>
+                            <input type="checkbox" checked={invert} onChange={handleInvertChange} />
+                            Invert
+                        </label>
                     </div>
                 </div>
             }

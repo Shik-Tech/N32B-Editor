@@ -5,13 +5,16 @@ function Knob({ id, setSelectedKnob, selectedKnobIndex }) {
         setSelectedKnob(id - 1);
     }
 
-    let className = 'Knob';
+    let className = '';
     if (selectedKnobIndex === id - 1) {
-        className += ' Knob-selected'
+        className += ' knob-selected'
     }
 
     return (
-        <div className={className} onClick={handleClick}></div>
+        <div className={'knobContainer' + className}>
+            <div className="knobId">{id}</div>
+            <div className="knob" onClick={handleClick}></div>
+        </div>
     );
 }
 

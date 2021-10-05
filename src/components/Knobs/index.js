@@ -14,9 +14,9 @@ const chunks = (arr, size) => {
 function Knobs({ knobsData, knobsPerRow, selectedKnobIndex, setSelectedKnob }) {
     const rows = chunks(knobsData, knobsPerRow);
     return (
-        <div className="KnobsContainer">
+        <div className="knobsContainer">
             {rows.map((knobsRowData, rowkey) =>
-                <div className="KnobRow" key={rowkey}>
+                <div className="knobRow" key={rowkey}>
                     {knobsRowData.map((data, key) =>
                         <Knob
                             key={data.id}

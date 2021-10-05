@@ -68,14 +68,18 @@ function MK2Editor({ selectedKnobIndex, currentPreset, updatePreset }) {
         setType2State(type2);
         setChannel1State(channel1);
         setChannel2State(channel2);
+        setInvertValue1(invertValue1);
+        setInvertValue2(invertValue2);
+        setValue1State(value1);
+        setValue2State(value2);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [selectedKnobIndex]);
 
     function handleInvertValue1Change(e) {
-        setInvertValue1(e.target.value);
+        setInvertValue1(e.target.checked);
     }
     function handleInvertValue2Change(e) {
-        setInvertValue2(e.target.value);
+        setInvertValue2(e.target.checked);
     }
     function handleType1Select(e) {
         setType1State(parseInt(e.target.value));
