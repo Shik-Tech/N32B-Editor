@@ -1,8 +1,9 @@
 import React, { useRef } from 'react';
-import { generateSysExFromPreset } from './utils';
+import { generateSysExFromPreset, generateSysExFromPreset_MK2 } from './utils';
 // import gear from "../images/gear4.svg";
 import { forEach } from 'lodash';
 import Popup from 'react-popup';
+import webmidi from 'webmidi';
 
 const { dialog } = window.remote;
 const jetpack = window.jetpack;
@@ -17,7 +18,8 @@ function PresetOperations(props) {
         // midiInput,
         updatePresetName,
         currentPresetIndex,
-        updateCurrentPresetIndex
+        updateCurrentPresetIndex,
+        isMK2
     } = props;
     const fileInput = useRef(null);
 
@@ -69,10 +71,10 @@ function PresetOperations(props) {
                     text: 'Write to Device',
                     className: 'success',
                     action: function () {
-                        const messages = generateSysExFromPreset(currentPreset);
+                        const messages = isMK2 ? generateSysExFromPreset_MK2(currentPreset) : generateSysExFromPreset(currentPreset);
                         forEach(messages, message => {
-                            // midiOutput.sendSysex(124, message);
-                            midiOutput.sendSysex(32, message);
+                            // console.log(webmidi.outputs[0].sendSysex(32, message));
+                            // midiOutput.sendSysex(32, message);
                         });
                         Popup.close();
                     }
@@ -151,16 +153,6 @@ function PresetOperations(props) {
                     Write to Device
                 </button>
             </div>
-
-            {/* {uploading &&
-                <div id="gear">
-                    <img
-                        src={gear}
-                        alt="gear icon"
-                        className="spinning"
-                    />
-                </div>
-            } */}
         </div>
     );
 }

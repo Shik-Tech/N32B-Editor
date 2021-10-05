@@ -4,258 +4,578 @@
         {
             "id": 1,
             "hardwareId": 15,
-            "type": 1,
-            "msb": 0,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 0,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 2,
             "hardwareId": 14,
-            "type": 1,
-            "msb": 1,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 1,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 3,
             "hardwareId": 12,
-            "type": 1,
-            "msb": 2,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 2,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 4,
             "hardwareId": 9,
-            "type": 1,
-            "msb": 3,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 3,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 5,
             "hardwareId": 31,
-            "type": 1,
-            "msb": 4,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 4,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 6,
             "hardwareId": 24,
-            "type": 1,
-            "msb": 5,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 5,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 7,
             "hardwareId": 20,
-            "type": 1,
-            "msb": 6,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 6,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 8,
             "hardwareId": 16,
-            "type": 1,
-            "msb": 7,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 7,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 9,
             "hardwareId": 13,
-            "type": 1,
-            "msb": 8,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 8,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 10,
             "hardwareId": 11,
-            "type": 1,
-            "msb": 9,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 9,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 11,
             "hardwareId": 10,
-            "type": 1,
-            "msb": 10,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 10,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 12,
             "hardwareId": 2,
-            "type": 1,
-            "msb": 11,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 11,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 13,
             "hardwareId": 30,
-            "type": 1,
-            "msb": 12,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 12,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 14,
             "hardwareId": 25,
-            "type": 1,
-            "msb": 13,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 13,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 15,
             "hardwareId": 21,
-            "type": 1,
-            "msb": 14,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 14,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 16,
             "hardwareId": 17,
-            "type": 1,
-            "msb": 15,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 15,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 17,
             "hardwareId": 8,
-            "type": 1,
-            "msb": 16,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 16,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 18,
             "hardwareId": 7,
-            "type": 1,
-            "msb": 17,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 17,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 19,
             "hardwareId": 4,
-            "type": 1,
-            "msb": 18,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 18,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 20,
             "hardwareId": 1,
-            "type": 1,
-            "msb": 19,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 19,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 21,
             "hardwareId": 29,
-            "type": 1,
-            "msb": 20,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 20,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 22,
             "hardwareId": 26,
-            "type": 1,
-            "msb": 21,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 21,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 23,
             "hardwareId": 22,
-            "type": 1,
-            "msb": 22,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 22,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 24,
             "hardwareId": 18,
-            "type": 1,
-            "msb": 23,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 23,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 25,
             "hardwareId": 6,
-            "type": 1,
-            "msb": 24,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 24,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 26,
             "hardwareId": 5,
-            "type": 1,
-            "msb": 25,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 25,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 27,
             "hardwareId": 3,
-            "type": 1,
-            "msb": 26,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 26,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 28,
             "hardwareId": 0,
-            "type": 1,
-            "msb": 27,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 27,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 29,
             "hardwareId": 28,
-            "type": 1,
-            "msb": 28,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 28,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 30,
             "hardwareId": 27,
-            "type": 1,
-            "msb": 29,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 29,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 31,
             "hardwareId": 23,
-            "type": 1,
-            "msb": 30,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 30,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         },
         {
             "id": 32,
             "hardwareId": 19,
-            "type": 1,
-            "msb": 31,
-            "lsb": 0,
-            "channel": 0
+            "data": [
+                {
+                    "knobType": 1,
+                    "data": 31,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "knobType": null,
+                    "data": 128,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
         }
     ]
 }

@@ -54,6 +54,58 @@ export function generateSysExFromPreset(currentPreset) {
     return messages;
 }
 
+export function generateSysExFromPreset_MK2(currentPreset) {
+    const messages = [];
+    const {
+        knobs
+    } = currentPreset;
+
+    forEach(knobs, (knobPair, key) => {
+        forEach(knobPair.data, (knob, pairKey) => {
+            const {
+                data,
+                channel,
+                knobType,
+                invert,
+            } = knob;
+            
+            const id = key;
+            // console.log(pairKey);
+            const knobMessage = [knobType, id];
+       
+            switch (knobType) {
+                // CC
+                case 1:
+                    knobMessage.push(data);
+                    knobMessage.push(0);
+                    break;
+                // CC & Channel
+                case 2:
+                    knobMessage.push(data);
+                    knobMessage.push(channel);
+                    break;
+                // NPRN
+                // case 3:
+                //     knobMessage.push(msb);
+                //     knobMessage.push(lsb);
+                //     knobMessage.push(0);
+                //     break;
+                // Disabled
+                case 11:
+                    break;
+                default:
+                    break;
+            }
+    
+            messages.push(knobMessage);
+        });
+    });
+
+    messages.push([5, currentPreset.presetID]);
+
+    return messages;
+}
+
 export function validateValueRange({ value, min, max }) {
     return Math.max(Number(min), Math.min(Number(max), Number(value)));
 }

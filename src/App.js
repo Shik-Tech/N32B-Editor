@@ -3,7 +3,8 @@ import WebMidi from 'webmidi';
 import {
   N32B,
   KnobEditor,
-  PresetOperations
+  PresetOperations,
+  ConnectDevice
 } from './components';
 import { defaultPresetMK1, defaultPresetMK2 } from './presetTemplates';
 import Version from './components/Version';
@@ -24,6 +25,7 @@ function App() {
   const [currentPresetIndex, updateCurrentPresetIndex] = useState(0);
   const [currentPresetName, updatePresetName] = useState('Default preset');
   const [highResolution, updateHighResolution] = useState(true);
+  const [isMK2, setIsMK2] = useState();
 
   useEffect(() => {
     WebMidi.enable((err) => {
@@ -32,10 +34,12 @@ function App() {
       }
       WebMidi.addListener("connected", function (e) {
         if (WebMidi.getInputByName("N32B MK2")) {
+          setIsMK2(true);
           updatePreset(defaultPresetMK2);
           setMidiInput(WebMidi.getInputByName("N32B MK2"));
           setMidiOutput(WebMidi.getOutputByName("N32B MK2"));
         } else if (WebMidi.getInputByName("N32B")) {
+          setIsMK2(false);
           updatePreset(defaultPresetMK1);
           setMidiInput(WebMidi.getInputByName("N32B"));
           setMidiOutput(WebMidi.getOutputByName("N32B"));
@@ -43,13 +47,8 @@ function App() {
       });
 
       WebMidi.addListener("disconnected", function (e) {
-        if (WebMidi.getInputByName("N32B MK2")) {
-          setMidiInput(WebMidi.getInputByName("N32B MK2"));
-          setMidiOutput(WebMidi.getOutputByName("N32B MK2"));
-        } else if (WebMidi.getInputByName("N32B")) {
-          setMidiInput(WebMidi.getInputByName("N32B"));
-          setMidiOutput(WebMidi.getOutputByName("N32B"));
-        }
+        setMidiInput(null);
+        setMidiOutput(null);
       });
     }, true);
   });
@@ -103,13 +102,7 @@ function App() {
   return (
     <div className="App">
       {!deviceIsConnected &&
-        <div className="deviceNotConnected">
-          <div className="column">
-            <div className="title">N32B Editor</div>
-            <div className="subtitle">Please connect the N32B to your computer with a data usb cable</div>
-            <sub>* Make sure you connect only one N32B device while using the editor</sub>
-          </div>
-        </div>
+        <ConnectDevice />
       }
       {deviceIsConnected &&
         <>
@@ -134,13 +127,16 @@ function App() {
               <div className="title">
                 Editing Knob: <span className="currentKnob">{currentPreset.knobs[selectedKnobIndex].id}</span>
               </div>
-              <label className="highResolution">
-                <input type="checkbox" checked={highResolution} onChange={handleHighResolutionChange} /> Hi-Res
-              </label>
+              {!isMK2 &&
+                <label className="highResolution">
+                  <input type="checkbox" checked={highResolution} onChange={handleHighResolutionChange} /> Hi-Res
+                </label>
+              }
             </div>
             <div className="seperator"></div>
             <div className="row flex-2">
               <KnobEditor
+                isMK2={isMK2}
                 selectedKnobIndex={selectedKnobIndex}
                 currentPreset={currentPreset}
                 updatePreset={updatePreset}
@@ -149,6 +145,7 @@ function App() {
             <div className="seperator border"></div>
             <div className="row">
               <PresetOperations
+                isMK2={isMK2}
                 currentPreset={currentPreset}
                 midiInput={midiInput}
                 midiOutput={midiOutput}
