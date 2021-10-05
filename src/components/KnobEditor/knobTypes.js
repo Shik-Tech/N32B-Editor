@@ -1,0 +1,11 @@
+const CONTROL_CHANGE = 1;
+const CONTROL_CHANGE_CHANNEL = 2;
+const DISABLE_KNOB = 11;
+
+const KNOB_TYPES = {
+    CONTROL_CHANGE,
+    CONTROL_CHANGE_CHANNEL,
+    DISABLE_KNOB
+}
+
+export default KNOB_TYPES;

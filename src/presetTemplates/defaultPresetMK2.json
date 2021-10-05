@@ -3,17 +3,17 @@
     "knobs": [
         {
             "id": 1,
-            "hardwareId": 15,
-            "data": [
+            "hardwareId": 0,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 0,
+                    "type": 1,
+                    "value": 0,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -21,17 +21,17 @@
         },
         {
             "id": 2,
-            "hardwareId": 14,
-            "data": [
+            "hardwareId": 4,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 1,
+                    "type": 1,
+                    "value": 1,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -39,17 +39,17 @@
         },
         {
             "id": 3,
-            "hardwareId": 12,
-            "data": [
+            "hardwareId": 8,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 2,
+                    "type": 1,
+                    "value": 2,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -57,17 +57,17 @@
         },
         {
             "id": 4,
-            "hardwareId": 9,
-            "data": [
+            "hardwareId": 12,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 3,
+                    "type": 1,
+                    "value": 3,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -75,17 +75,17 @@
         },
         {
             "id": 5,
-            "hardwareId": 31,
-            "data": [
+            "hardwareId": 16,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 4,
+                    "type": 1,
+                    "value": 4,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -93,17 +93,17 @@
         },
         {
             "id": 6,
-            "hardwareId": 24,
-            "data": [
+            "hardwareId": 20,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 5,
+                    "type": 1,
+                    "value": 5,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -111,17 +111,17 @@
         },
         {
             "id": 7,
-            "hardwareId": 20,
-            "data": [
+            "hardwareId": 24,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 6,
+                    "type": 1,
+                    "value": 6,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -129,17 +129,17 @@
         },
         {
             "id": 8,
-            "hardwareId": 16,
-            "data": [
+            "hardwareId": 28,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 7,
+                    "type": 1,
+                    "value": 7,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -147,17 +147,17 @@
         },
         {
             "id": 9,
-            "hardwareId": 13,
-            "data": [
+            "hardwareId": 1,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 8,
+                    "type": 1,
+                    "value": 8,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -165,17 +165,17 @@
         },
         {
             "id": 10,
-            "hardwareId": 11,
-            "data": [
+            "hardwareId": 5,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 9,
+                    "type": 1,
+                    "value": 9,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -183,17 +183,17 @@
         },
         {
             "id": 11,
-            "hardwareId": 10,
-            "data": [
+            "hardwareId": 9,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 10,
+                    "type": 1,
+                    "value": 10,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -201,17 +201,17 @@
         },
         {
             "id": 12,
-            "hardwareId": 2,
-            "data": [
+            "hardwareId": 13,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 11,
+                    "type": 1,
+                    "value": 11,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -219,17 +219,17 @@
         },
         {
             "id": 13,
-            "hardwareId": 30,
-            "data": [
+            "hardwareId": 17,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 12,
+                    "type": 1,
+                    "value": 12,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -237,17 +237,17 @@
         },
         {
             "id": 14,
-            "hardwareId": 25,
-            "data": [
+            "hardwareId": 21,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 13,
+                    "type": 1,
+                    "value": 13,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -255,17 +255,17 @@
         },
         {
             "id": 15,
-            "hardwareId": 21,
-            "data": [
+            "hardwareId": 25,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 14,
+                    "type": 1,
+                    "value": 14,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -273,17 +273,17 @@
         },
         {
             "id": 16,
-            "hardwareId": 17,
-            "data": [
+            "hardwareId": 29,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 15,
+                    "type": 1,
+                    "value": 15,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -291,17 +291,17 @@
         },
         {
             "id": 17,
-            "hardwareId": 8,
-            "data": [
+            "hardwareId": 2,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 16,
+                    "type": 1,
+                    "value": 16,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -309,17 +309,17 @@
         },
         {
             "id": 18,
-            "hardwareId": 7,
-            "data": [
+            "hardwareId": 6,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 17,
+                    "type": 1,
+                    "value": 17,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -327,17 +327,17 @@
         },
         {
             "id": 19,
-            "hardwareId": 4,
-            "data": [
+            "hardwareId": 10,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 18,
+                    "type": 1,
+                    "value": 18,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -345,17 +345,17 @@
         },
         {
             "id": 20,
-            "hardwareId": 1,
-            "data": [
+            "hardwareId": 14,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 19,
+                    "type": 1,
+                    "value": 19,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -363,17 +363,17 @@
         },
         {
             "id": 21,
-            "hardwareId": 29,
-            "data": [
+            "hardwareId": 18,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 20,
+                    "type": 1,
+                    "value": 20,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -381,17 +381,17 @@
         },
         {
             "id": 22,
-            "hardwareId": 26,
-            "data": [
+            "hardwareId": 22,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 21,
+                    "type": 1,
+                    "value": 21,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -399,17 +399,17 @@
         },
         {
             "id": 23,
-            "hardwareId": 22,
-            "data": [
+            "hardwareId": 26,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 22,
+                    "type": 1,
+                    "value": 22,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -417,17 +417,17 @@
         },
         {
             "id": 24,
-            "hardwareId": 18,
-            "data": [
+            "hardwareId": 30,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 23,
+                    "type": 1,
+                    "value": 23,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -435,17 +435,17 @@
         },
         {
             "id": 25,
-            "hardwareId": 6,
-            "data": [
+            "hardwareId": 3,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 24,
+                    "type": 1,
+                    "value": 24,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -453,17 +453,17 @@
         },
         {
             "id": 26,
-            "hardwareId": 5,
-            "data": [
+            "hardwareId": 7,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 25,
+                    "type": 1,
+                    "value": 25,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -471,17 +471,17 @@
         },
         {
             "id": 27,
-            "hardwareId": 3,
-            "data": [
+            "hardwareId": 11,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 26,
+                    "type": 1,
+                    "value": 26,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -489,17 +489,17 @@
         },
         {
             "id": 28,
-            "hardwareId": 0,
-            "data": [
+            "hardwareId": 15,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 27,
+                    "type": 1,
+                    "value": 27,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -507,17 +507,17 @@
         },
         {
             "id": 29,
-            "hardwareId": 28,
-            "data": [
+            "hardwareId": 19,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 28,
+                    "type": 1,
+                    "value": 28,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -525,17 +525,17 @@
         },
         {
             "id": 30,
-            "hardwareId": 27,
-            "data": [
+            "hardwareId": 23,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 29,
+                    "type": 1,
+                    "value": 29,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -543,17 +543,17 @@
         },
         {
             "id": 31,
-            "hardwareId": 23,
-            "data": [
+            "hardwareId": 27,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 30,
+                    "type": 1,
+                    "value": 30,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }
@@ -561,17 +561,17 @@
         },
         {
             "id": 32,
-            "hardwareId": 19,
-            "data": [
+            "hardwareId": 31,
+            "knobPair": [
                 {
-                    "knobType": 1,
-                    "data": 31,
+                    "type": 1,
+                    "value": 31,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "knobType": null,
-                    "data": 128,
+                    "type": 11,
+                    "value": 128,
                     "channel": 0,
                     "invert": false
                 }

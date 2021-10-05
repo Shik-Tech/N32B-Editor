@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import WebMidi from 'webmidi';
 import {
   N32B,
-  KnobEditor,
+  MK1Editor,
+  MK2Editor,
   PresetOperations,
   ConnectDevice
 } from './components';
@@ -110,10 +111,16 @@ function App() {
             <div className="row">
               <div className="title">N32B Editor</div>
               <div className="row">
-                <div className="presetNameTitle">Current loaded preset:</div>
-                <div className="presetName">{currentPresetName}</div>
+                <div className="headerTitle2">Device:</div>
+                <div className="headerValue">{midiOutput.name}</div>
+              </div>
+              <div className="seperator border horizon"></div>
+              <div className="row">
+                <div className="headerTitle2">Preset:</div>
+                <div className="headerValue">{currentPresetName}</div>
               </div>
             </div>
+            <div className="seperator"></div>
             <N32B
               knobsData={currentPreset.knobs}
               knobsPerRow={knobsPerRow}
@@ -135,12 +142,20 @@ function App() {
             </div>
             <div className="seperator"></div>
             <div className="row flex-2">
-              <KnobEditor
-                isMK2={isMK2}
-                selectedKnobIndex={selectedKnobIndex}
-                currentPreset={currentPreset}
-                updatePreset={updatePreset}
-              />
+              {isMK2 &&
+                <MK2Editor
+                  selectedKnobIndex={selectedKnobIndex}
+                  currentPreset={currentPreset}
+                  updatePreset={updatePreset}
+                />
+              }
+              {!isMK2 &&
+                <MK1Editor
+                  selectedKnobIndex={selectedKnobIndex}
+                  currentPreset={currentPreset}
+                  updatePreset={updatePreset}
+                />
+              }
             </div>
             <div className="seperator border"></div>
             <div className="row">

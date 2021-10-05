@@ -18,7 +18,11 @@ function Knobs({ knobsData, knobsPerRow, selectedKnobIndex, setSelectedKnob }) {
             {rows.map((knobsRowData, rowkey) =>
                 <div className="KnobRow" key={rowkey}>
                     {knobsRowData.map((data, key) =>
-                        <Knob key={data.id} {...data} setSelectedKnob={setSelectedKnob} selectedKnobIndex={selectedKnobIndex}></Knob>
+                        <Knob
+                            key={data.id}
+                            {...data}
+                            setSelectedKnob={setSelectedKnob}
+                            selectedKnobIndex={selectedKnobIndex} />
                     )}
                 </div>
             )}

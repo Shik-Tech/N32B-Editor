@@ -35,17 +35,17 @@ html {
   font-weight: bold;
 }
 
-.presetNameTitle {
+.headerTitle2 {
   margin: 0 20px 5px 0;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   justify-self: flex-end;
   align-self: center;
 }
 
-.presetName {
+.headerValue {
   margin: 0 20px 5px 0;
-  font-size: 16px;
+  font-size: 14px;
   justify-self: flex-end;
   align-self: center;
 }
@@ -184,11 +184,20 @@ button:disabled {
 }
 
 .seperator {
-  margin: 12px 0;
+  margin: 5px 0;
+}
+
+.seperator.horizon {
+  margin: 0 5px;
 }
 
 .seperator.border {
-  border-top: 5px solid #333333;
+  border-top: 2px solid #333333;
+}
+
+.seperator.border.horizon {
+  border-top: none;
+  border-right: 2px solid #333333;
 }
 
 .editorContainer {
