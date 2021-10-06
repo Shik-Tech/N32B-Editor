@@ -1,5 +1,6 @@
 {
     "presetID": 0,
+    "presetName": "Dual Inverted 1",
     "knobs": [
         {
             "id": 1,
@@ -12,10 +13,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 32,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -30,10 +31,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 33,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -48,10 +49,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 34,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -66,10 +67,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 35,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -84,10 +85,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 36,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -102,10 +103,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 37,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -120,10 +121,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 38,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -138,10 +139,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 39,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -156,10 +157,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 40,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -174,10 +175,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 41,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -187,15 +188,15 @@
             "knobPair": [
                 {
                     "type": 1,
-                    "value": 10,
+                    "value": 42,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "type": 11,
+                    "type": 1,
                     "value": 128,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -205,15 +206,15 @@
             "knobPair": [
                 {
                     "type": 1,
-                    "value": 11,
+                    "value": 1,
                     "channel": 0,
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 43,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -228,10 +229,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 44,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -246,10 +247,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 45,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -264,10 +265,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 46,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -282,10 +283,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 47,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -300,10 +301,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 48,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -318,10 +319,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 49,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -336,10 +337,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 50,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -354,10 +355,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 51,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -372,10 +373,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 52,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -390,10 +391,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 53,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -408,10 +409,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 54,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -426,10 +427,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 55,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -444,10 +445,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 56,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -462,16 +463,16 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 57,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
         {
             "id": 27,
-            "hardwareId": 11,
+            "hardwareId": 1,
             "knobPair": [
                 {
                     "type": 1,
@@ -480,10 +481,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 58,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -498,10 +499,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 59,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -516,10 +517,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 60,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -534,10 +535,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 61,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -552,10 +553,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 62,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         },
@@ -570,10 +571,10 @@
                     "invert": false
                 },
                 {
-                    "type": 11,
-                    "value": 128,
+                    "type": 1,
+                    "value": 63,
                     "channel": 0,
-                    "invert": false
+                    "invert": true
                 }
             ]
         }

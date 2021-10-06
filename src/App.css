@@ -24,14 +24,14 @@ html {
 .title {
   margin: 0 0 5px 0;
   /* padding: 0; */
-  font-size: 25px;
+  font-size: 16px;
   font-weight: bold;
 }
 
 .subtitle {
-  margin: 0 0 10px 0;
+  margin: 0 0 3px 0;
   /* padding: 0; */
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -120,8 +120,8 @@ input {
 }
 
 input[type=checkbox] {
-  height: 18px;
-  width: 18px;
+  height: 13px;
+  width: 13px;
   cursor: pointer;
   flex: none;
 }

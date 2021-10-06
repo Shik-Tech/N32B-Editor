@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { validateValueRange } from '../PresetOperations/utils';
+// import { validateValueRange } from '../PresetOperations/utils';
 import Form from './Form';
+import KNOB_TYPES from './knobTypes';
 
 function MK2Editor({ selectedKnobIndex, currentPreset, updatePreset }) {
     const {
@@ -35,10 +36,7 @@ function MK2Editor({ selectedKnobIndex, currentPreset, updatePreset }) {
                         ...currentPreset.knobs[selectedKnobIndex],
                         knobPair: [
                             {
-                                type: type1State,
-                                value: value1State,
-                                channel: channel1State,
-                                invert: invertValue1State
+                                ...currentPreset.knobs[selectedKnobIndex].knobPair[0]
                             },
                             {
                                 type: type2State,
@@ -53,27 +51,55 @@ function MK2Editor({ selectedKnobIndex, currentPreset, updatePreset }) {
         }));
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [
-        type1State,
         type2State,
-        value1State,
         value2State,
-        channel1State,
         channel2State,
-        invertValue1State,
         invertValue2State
     ]);
 
     useEffect(() => {
-        setType1State(type1);
-        setType2State(type2);
-        setChannel1State(channel1);
-        setChannel2State(channel2);
-        setInvertValue1(invertValue1);
-        setInvertValue2(invertValue2);
-        setValue1State(value1);
-        setValue2State(value2);
+        console.log("updating", type1State);
+        updatePreset(prev => ({
+            ...prev,
+            knobs:
+                [
+                    ...currentPreset.knobs.slice(0, selectedKnobIndex),
+                    {
+                        ...currentPreset.knobs[selectedKnobIndex],
+                        knobPair: [
+                            {
+                                type: type1State,
+                                value: value1State,
+                                channel: channel1State,
+                                invert: invertValue1State
+                            },
+                            {
+                                ...currentPreset.knobs[selectedKnobIndex].knobPair[1]
+                            }
+                        ]
+                    },
+                    ...currentPreset.knobs.slice(selectedKnobIndex + 1)
+                ]
+        }));
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [selectedKnobIndex]);
+    }, [
+        type1State,
+        value1State,
+        channel1State,
+        invertValue1State
+    ]);
+
+    // useEffect(() => {
+    //     setType1State(type1);
+    //     setType2State(type2);
+    //     setChannel1State(channel1);
+    //     setChannel2State(channel2);
+    //     setInvertValue1(invertValue1);
+    //     setInvertValue2(invertValue2);
+    //     setValue1State(value1);
+    //     setValue2State(value2);
+    //     // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, [selectedKnobIndex]);
 
     function handleInvertValue1Change(e) {
         setInvertValue1(e.target.checked);
@@ -82,16 +108,24 @@ function MK2Editor({ selectedKnobIndex, currentPreset, updatePreset }) {
         setInvertValue2(e.target.checked);
     }
     function handleType1Select(e) {
-        setType1State(parseInt(e.target.value));
+        const value = parseInt(e.target.value);
+        setType1State(value);
+        if (value !== KNOB_TYPES.DISABLE_KNOB) {
+            setValue1State(0);
+        }
     }
     function handleType2Select(e) {
-        setType2State(parseInt(e.target.value));
+        const value = parseInt(e.target.value);
+        setType2State(value);
+        if (value !== KNOB_TYPES.DISABLE_KNOB) {
+            setValue2State(0);
+        }
     }
     function handleValue1Change(e) {
-        setValue1State(parseInt(validateValueRange(e.target)));
+        setValue1State(parseInt(e.target.value));
     }
     function handleValue2Change(e) {
-        setValue2State(parseInt(validateValueRange(e.target)));
+        setValue2State(parseInt(e.target.value));
     }
     function handleChannel1Change(e) {
         setChannel1State(parseInt(e.target.value));

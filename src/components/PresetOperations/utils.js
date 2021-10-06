@@ -65,15 +65,15 @@ export function generateSysExFromPreset_MK2(currentPreset) {
             const {
                 data,
                 channel,
-                knobType,
+                type,
                 invert,
             } = knob;
             
             const id = key;
             // console.log(pairKey);
-            const knobMessage = [knobType, id];
+            const knobMessage = [type, id];
        
-            switch (knobType) {
+            switch (type) {
                 // CC
                 case 1:
                     knobMessage.push(data);

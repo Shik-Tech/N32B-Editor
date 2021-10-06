@@ -2,6 +2,7 @@
     "channel": 1,
     "highResolution": true,
     "presetID": 0,
+    "presetName": "Default High-Res",
     "knobs": [
         {
             "id": 1,

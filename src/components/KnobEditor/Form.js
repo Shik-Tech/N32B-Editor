@@ -17,6 +17,15 @@ function ChannelSelect({ disabled, channel, handleChannelChange }) {
     )
 }
 
+function TypeSelect({ type, handleTypeSelect }) {
+    return (
+        <select select={type} value={type} onChange={handleTypeSelect}>
+            <option value={KNOB_TYPES.DISABLE_KNOB}>Disabled</option>
+            <option value={KNOB_TYPES.CONTROL_CHANGE}>Control Change</option>
+        </select>
+    )
+}
+
 function Form({
     type,
     value,
@@ -33,10 +42,7 @@ function Form({
             <div className="row editorRow">
                 <div className="column">
                     <label>Type</label>
-                    <select select={type} value={type} onChange={handleTypeSelect}>
-                        <option value={KNOB_TYPES.DISABLE_KNOB}>Disabled</option>
-                        <option value={KNOB_TYPES.CONTROL_CHANGE}>Control Change</option>
-                    </select>
+                    <TypeSelect type={type} handleTypeSelect={handleTypeSelect} />
                 </div>
                 {!isDisabled &&
                     <div className="column">

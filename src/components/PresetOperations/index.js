@@ -16,22 +16,22 @@ function PresetOperations(props) {
         currentPreset,
         // midiOutput,
         // midiInput,
-        updatePresetName,
-        currentPresetIndex,
-        updateCurrentPresetIndex,
+        // updatePresetName,
+        currentDevicePresetIndex,
+        updateCurrentDevicePresetIndex,
         isMK2
     } = props;
     const fileInput = useRef(null);
 
     const handlePresetSelect = e => {
-        updateCurrentPresetIndex(parseInt(e.target.value));
+        updateCurrentDevicePresetIndex(parseInt(e.target.value));
     }
 
     const handleLoadPreset = e => {
         const reader = new FileReader();
         if (fileInput.current.files.length > 0) {
             const file = fileInput.current.files[0];
-            updatePresetName(file.name);
+            // updatePresetName(file.name);
             reader.onload = (event => {
                 const preset = JSON.parse(event.target.result);
                 updatePreset(preset);
@@ -138,7 +138,7 @@ function PresetOperations(props) {
 
             <div className="row editorRow">
                 <label>Write to:</label>
-                <select value={currentPresetIndex} onChange={handlePresetSelect}>
+                <select value={currentDevicePresetIndex} onChange={handlePresetSelect}>
                     <option value={0}>Preset 0</option>
                     <option value={1}>Preset 1</option>
                     <option value={2}>Preset 2</option>

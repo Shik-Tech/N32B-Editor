@@ -1,4 +1,4 @@
-import MK1Editor from './MK1Editor';
-import MK2Editor from './MK2Editor';
+import HighResEditor from './HighResEditor';
+import DualModeEditor from './DualModeEditor';
 
-export { MK1Editor, MK2Editor };
+export { HighResEditor, DualModeEditor };

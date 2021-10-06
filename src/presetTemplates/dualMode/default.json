@@ -1,0 +1,582 @@
+{
+    "presetID": 0,
+    "presetName": "Default Single",
+    "knobs": [
+        {
+            "id": 1,
+            "hardwareId": 0,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "hardwareId": 4,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 1,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "hardwareId": 8,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 2,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "hardwareId": 12,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 3,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "hardwareId": 16,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 4,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "hardwareId": 20,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 5,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "hardwareId": 24,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 6,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "hardwareId": 28,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 7,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "hardwareId": 1,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 8,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "hardwareId": 5,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 9,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "hardwareId": 9,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 10,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "hardwareId": 13,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 11,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "hardwareId": 17,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 12,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "hardwareId": 21,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 13,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "hardwareId": 25,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 14,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "hardwareId": 29,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 15,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "hardwareId": 2,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 16,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "hardwareId": 6,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 17,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "hardwareId": 10,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 18,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 20,
+            "hardwareId": 14,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 19,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 21,
+            "hardwareId": 18,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 20,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 22,
+            "hardwareId": 22,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 21,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 23,
+            "hardwareId": 26,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 22,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 24,
+            "hardwareId": 30,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 23,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 25,
+            "hardwareId": 3,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 24,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 26,
+            "hardwareId": 7,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 25,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 27,
+            "hardwareId": 11,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 26,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 28,
+            "hardwareId": 15,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 27,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 29,
+            "hardwareId": 19,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 28,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 30,
+            "hardwareId": 23,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 29,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 31,
+            "hardwareId": 27,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 30,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        },
+        {
+            "id": 32,
+            "hardwareId": 31,
+            "knobPair": [
+                {
+                    "type": 1,
+                    "value": 31,
+                    "channel": 0,
+                    "invert": false
+                },
+                {
+                    "type": 11,
+                    "value": 0,
+                    "channel": 0,
+                    "invert": false
+                }
+            ]
+        }
+    ]
+}
