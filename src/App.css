@@ -5,8 +5,6 @@ html {
 
 .App {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  /* width: 920px; */
-  /* height: 480px; */
   height: 100vh;
 
   display: flex;
@@ -22,9 +20,9 @@ html {
 }
 
 .title {
-  margin: 0 0 5px 0;
+  /* margin: 0 0 5px 0; */
   /* padding: 0; */
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -36,8 +34,7 @@ html {
 }
 
 .headerTitle2 {
-  margin: 0 20px 5px 0;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: bold;
   justify-self: flex-end;
   align-self: center;
@@ -64,6 +61,10 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.row.spaceAround {
+  justify-content: space-around;
 }
 
 .column {
@@ -117,6 +118,10 @@ input {
   text-align: center;
   /* flex: 1; */
   justify-content: flex-start;
+}
+
+input {
+  height: 14px;
 }
 
 input[type=checkbox] {
@@ -207,12 +212,24 @@ button:disabled {
   flex: 1;
 }
 
+.deviceName label,
+.presetSelect input,
+.presetSelect button,
+.presetSelect label,
+.presetSelect select,
 .editorContainer label,
 .editorContainer select {
   display: flex;
   align-items: center;
   margin-bottom: 2px;
-  font-size: 0.8em;
+  font-size: 0.7em;
+}
+
+.presetSelect {
+  align-content: flex-end;
+}
+.presetSelect .buttonContainer {
+  justify-content: flex-end;
 }
 
 .editorRow {
@@ -220,6 +237,10 @@ button:disabled {
   margin: 0px 5px 5px 5px;
 }
 
+.presetSelect .column {
+  flex: 1;
+  margin: 3px;
+}
 .editorRow .column {
   flex: 1;
   margin: 5px;
@@ -249,38 +270,3 @@ button:disabled {
   width: 80px;
   height: 80px;
 }
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(359deg);
-  }
-}
-
-.spinning {
-  animation: rotation 0.8s infinite linear;
-}
-
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-} */
-
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
-
-
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */

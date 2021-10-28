@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { validateValueRange } from '../PresetOperations/utils';
 
-function MK1Editor({ selectedKnobIndex, currentPreset, updatePreset }) {
+function HighResEditor({ selectedKnobIndex, currentPreset, updatePreset, setIsPristine }) {
     const {
         type,
         msb,
@@ -63,18 +63,22 @@ function MK1Editor({ selectedKnobIndex, currentPreset, updatePreset }) {
     }, [currentPreset.highResolution, typeState]);
 
     function handleTypeSelect(e) {
+        setIsPristine(false);
         setTypeState(parseInt(e.target.value));
     }
 
     function handleValueChange(e) {
+        setIsPristine(false);
         setMsbState(parseInt(validateValueRange(e.target)));
     }
 
     function handleLSBChange(e) {
+        setIsPristine(false);
         setLsbState(parseInt(validateValueRange(e.target)));
     }
 
     function handleChannelChange(e) {
+        setIsPristine(false);
         setChannelState(parseInt(validateValueRange(e.target)));
     }
 
@@ -120,4 +124,4 @@ function MK1Editor({ selectedKnobIndex, currentPreset, updatePreset }) {
     )
 }
 
-export default MK1Editor;
+export default HighResEditor;

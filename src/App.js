@@ -1,19 +1,20 @@
 import React, { useEffect, useState } from 'react';
+import { find } from 'lodash';
 import WebMidi from 'webmidi';
 import {
   N32B,
   HighResEditor,
   DualModeEditor,
   PresetOperations,
-  ConnectDevice
+  ConnectDevice,
+  PresetSelect,
+  Version
 } from './components';
 import { dualModePresets, highResPresets } from './presetTemplates';
-import Version from './components/Version';
 import Popup from 'react-popup';
 
 import './App.css';
 import './Popup.css';
-import PresetSelect from './components/PresetSelect';
 
 function App() {
   const appVersion = "v1.1.0";
@@ -30,6 +31,7 @@ function App() {
   const [highResolution, updateHighResolution] = useState(true);
   const [isDualMode, setIsDualMode] = useState();
   const [presets, setPresets] = useState([]);
+  const [isPristine, setIsPristine] = useState(true);
 
   useEffect(() => {
     WebMidi.enable((err) => {
@@ -98,15 +100,45 @@ function App() {
     }));
   }, [highResolution]);
 
-    const handlePresetChange = e => {
-      updateCurrentPresetIndex(parseInt(e.target.value));
+  useEffect(() => {
+    const isExistingPreset = find(presets, preset => preset.presetName === 'User Custom');
+    if (!isExistingPreset) {
+      setPresets(prev => ([
+        {
+          ...currentPreset,
+          presetName: 'User Custom'
+        },
+        ...prev
+      ]));
     }
+    updateCurrentPresetIndex(0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isPristine]);
+
+  const handlePresetChange = e => {
+    setIsPristine(true);
+    updateCurrentPresetIndex(parseInt(e.target.value));
+  }
   const handleProgramChange = e => {
     updateCurrentDevicePresetIndex(e.data[1]);
   }
 
   const handleHighResolutionChange = e => {
     updateHighResolution(!!e.target.checked);
+  }
+
+  const handleLoadNewPreset = preset => {
+    setPresets(prev => ([
+      preset,
+      ...prev
+    ]));
+  }
+
+  const handlePresetNameChange = e => {
+    updatePreset(prev => ({
+      ...prev,
+      presetName: e.target.value
+    }));
   }
 
   const handleSysex = e => {
@@ -121,24 +153,24 @@ function App() {
       {deviceIsConnected &&
         <>
           <div className="leftSide">
-            <div className="row">
-              {/* <div className="title">N32B Editor</div> */}
-              <div className="row">
-                <div className="headerTitle2">Device:</div>
+            <div className="row spaceAround">
+              <div className="column">
+                <div className="title">N32B Editor</div>
+              </div>
+              <div className="column deviceName">
+                <label>Device:</label>
                 <div className="headerValue">{midiOutput.name}</div>
               </div>
-              <div className="seperator border horizon"></div>
-              <div className="row">
-                <div className="headerTitle2">Presets:</div>
-                <PresetSelect
-                  handlePresetChange={handlePresetChange}
-                  currentPresetIndex={currentPresetIndex}
-                  presets={presets}
-                />
-                {/* <div className="headerValue">{currentPresetName}</div> */}
-              </div>
+              <PresetSelect
+                handlePresetChange={handlePresetChange}
+                handlePresetNameChange={handlePresetNameChange}
+                currentPresetIndex={currentPresetIndex}
+                presets={presets}
+              />
             </div>
+
             <div className="seperator"></div>
+
             <N32B
               knobsData={currentPreset.knobs}
               knobsPerRow={knobsPerRow}
@@ -158,13 +190,16 @@ function App() {
                 </label>
               }
             </div>
+
             <div className="seperator"></div>
+
             <div className="row flex-2">
               {!isDualMode &&
                 <HighResEditor
                   selectedKnobIndex={selectedKnobIndex}
                   currentPreset={currentPreset}
                   updatePreset={updatePreset}
+                  setIsPristine={setIsPristine}
                 />
               }
               {isDualMode &&
@@ -172,10 +207,13 @@ function App() {
                   selectedKnobIndex={selectedKnobIndex}
                   currentPreset={currentPreset}
                   updatePreset={updatePreset}
+                  setIsPristine={setIsPristine}
                 />
               }
             </div>
+
             <div className="seperator border"></div>
+
             <div className="row">
               <PresetOperations
                 isDualMode={isDualMode}
@@ -183,8 +221,7 @@ function App() {
                 midiInput={midiInput}
                 midiOutput={midiOutput}
                 currentDevicePresetIndex={currentDevicePresetIndex}
-                updatePreset={updatePreset}
-                // updatePresetName={updatePresetName}
+                handleLoadNewPreset={handleLoadNewPreset}
                 updateCurrentDevicePresetIndex={updateCurrentDevicePresetIndex}
               />
             </div>

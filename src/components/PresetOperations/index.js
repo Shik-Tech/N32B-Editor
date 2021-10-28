@@ -1,9 +1,8 @@
 import React, { useRef } from 'react';
 import { generateSysExFromPreset, generateSysExFromPreset_MK2 } from './utils';
-// import gear from "../images/gear4.svg";
 import { forEach } from 'lodash';
 import Popup from 'react-popup';
-import webmidi from 'webmidi';
+// import webmidi from 'webmidi';
 
 const { dialog } = window.remote;
 const jetpack = window.jetpack;
@@ -12,14 +11,13 @@ const jetpack = window.jetpack;
 
 function PresetOperations(props) {
     const {
-        updatePreset,
+        isDualMode,
         currentPreset,
-        // midiOutput,
         // midiInput,
-        // updatePresetName,
+        // midiOutput,
+        handleLoadNewPreset,
         currentDevicePresetIndex,
-        updateCurrentDevicePresetIndex,
-        isMK2
+        updateCurrentDevicePresetIndex
     } = props;
     const fileInput = useRef(null);
 
@@ -34,7 +32,8 @@ function PresetOperations(props) {
             // updatePresetName(file.name);
             reader.onload = (event => {
                 const preset = JSON.parse(event.target.result);
-                updatePreset(preset);
+                handleLoadNewPreset(preset);
+                updateCurrentDevicePresetIndex(0);
             });
             reader.readAsText(file);
         }
@@ -42,8 +41,8 @@ function PresetOperations(props) {
 
     const handleSavePreset = e => {
         const presetFilePath = dialog.showSaveDialogSync({
-            title: "Save Preset",
-            buttonLabel: "Save Preset"
+            title: 'Save Preset',
+            buttonLabel: 'Save Preset'
         });
         if (presetFilePath) {
             try {
@@ -71,7 +70,7 @@ function PresetOperations(props) {
                     text: 'Write to Device',
                     className: 'success',
                     action: function () {
-                        const messages = isMK2 ? generateSysExFromPreset_MK2(currentPreset) : generateSysExFromPreset(currentPreset);
+                        const messages = isDualMode ? generateSysExFromPreset_MK2(currentPreset) : generateSysExFromPreset(currentPreset);
                         forEach(messages, message => {
                             // console.log(webmidi.outputs[0].sendSysex(32, message));
                             // midiOutput.sendSysex(32, message);
@@ -102,7 +101,7 @@ function PresetOperations(props) {
                     >
                         Load Preset<br />
                         to the editor
-                </button>
+                    </button>
                     <input
                         className="hiddenField"
                         type="file"
@@ -118,7 +117,7 @@ function PresetOperations(props) {
                     >
                         Save Preset<br />
                         to your computer
-                </button>
+                    </button>
                 </div>
             </div>
 
