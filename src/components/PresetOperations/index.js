@@ -4,10 +4,9 @@ import { forEach } from 'lodash';
 import Popup from 'react-popup';
 // import webmidi from 'webmidi';
 
-const { dialog } = window.remote;
+console.log(window.electron);
+// const { dialog } = window.electron;
 const jetpack = window.jetpack;
-
-
 
 function PresetOperations(props) {
     const {
@@ -40,21 +39,33 @@ function PresetOperations(props) {
     }
 
     const handleSavePreset = e => {
-        const presetFilePath = dialog.showSaveDialogSync({
-            title: 'Save Preset',
-            buttonLabel: 'Save Preset'
-        });
-        if (presetFilePath) {
-            try {
-                jetpack.write(presetFilePath, currentPreset);
-            }
-            catch (err) {
-                console.log('error: ', err);
-            }
-        }
+        // const presetFilePath = dialog.showSaveDialogSync({
+        //     title: 'Save Preset',
+        //     buttonLabel: 'Save Preset'
+        // });
+        // if (presetFilePath) {
+        //     try {
+        //         jetpack.write(presetFilePath, currentPreset);
+        //     }
+        //     catch (err) {
+        //         console.log('error: ', err);
+        //     }
+        // }
     }
 
     const handleSaveToDevice = e => {
+        const action = function () {
+            const messages = isDualMode ?
+                generateSysExFromPreset_MK2(currentPreset) : generateSysExFromPreset(currentPreset);
+            forEach(messages, message => {
+                // console.log(webmidi.outputs[0].sendSysex(32, message));
+
+                console.log(message);
+                // midiOutput.sendSysex(32, message);
+            });
+            Popup.close();
+        };
+
         Popup.create({
             title: 'Write to device',
             content: `You are about to overwrite "Preset ${currentPreset.presetID}".`,
@@ -69,14 +80,7 @@ function PresetOperations(props) {
                 right: [{
                     text: 'Write to Device',
                     className: 'success',
-                    action: function () {
-                        const messages = isDualMode ? generateSysExFromPreset_MK2(currentPreset) : generateSysExFromPreset(currentPreset);
-                        forEach(messages, message => {
-                            // console.log(webmidi.outputs[0].sendSysex(32, message));
-                            // midiOutput.sendSysex(32, message);
-                        });
-                        Popup.close();
-                    }
+                    action
                 }]
             }
         });

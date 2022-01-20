@@ -1,7 +1,10 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, webContents } = require('electron');
 const isDev = require('electron-is-dev');   
 const path = require('path');
- 
+
+// require("@electron/remote/main").enable(webContents);
+// require('@electron/remote/main').initialize();
+
 let mainWindow;
  
 function createWindow() {

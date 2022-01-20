@@ -52,22 +52,23 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
     "avrgirl-arduino": "^5.0.0",
-    "concurrently": "^5.3.0",
-    "electron-is-dev": "^1.2.0",
+    "concurrently": "^6.3.0",
+    "electron-is-dev": "^2.0.0",
     "fs-jetpack": "^4.0.0",
     "lodash": "^4.17.20",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-popup": "^0.10.0",
-    "react-scripts": "4.0.0",
-    "wait-on": "^5.2.0",
+    "react-scripts": "^4.0.0",
+    "wait-on": "^6.0.0",
     "webmidi": "^2.5.1"
   },
   "devDependencies": {
+    "@electron/remote": "^2.0.1",
     "@testing-library/jest-dom": "^5.11.5",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "electron": "^10.1.5",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "electron": "^15.3.0",
     "electron-builder": "^22.9.1"
   }
 }

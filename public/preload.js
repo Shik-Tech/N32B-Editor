@@ -1,7 +1,7 @@
-const { contextBridge, remote } = require('electron');
-const jetpack = require('fs-jetpack');
+const { contextBridge, ipcRenderer } = require('electron');
 
-contextBridge.exposeInMainWorld('remote', {
-    dialog: remote.dialog
+const jetpack = require('fs-jetpack');
+contextBridge.exposeInMainWorld('electron', {
+    dialog: require('@electron/remote')
 });
 contextBridge.exposeInMainWorld('jetpack', jetpack);
